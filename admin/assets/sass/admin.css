@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Segoe UI';
+}
+
+body {
+  background-color: #ebebeb;
+  font-weight: 500;
+}
+
+.admin-form {
+  background-color: white;
+  margin: 0% auto;
+  padding: 1.5rem;
+  width: 400px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 1rem;
+}
+
+.admin-form .register-form header {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.admin-form .register-form hr {
+  margin-bottom: 1.5rem;
+  border: 1px #ebebeb solid;
+}
+
+.admin-form .register-form .name-field {
+  display: flex;
+  justify-content: space-between;
+}
+
+.admin-form .register-form .name-field .first-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-form .register-form .name-field .last-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-form .register-form input {
+  border: 1px #ebebeb solid;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.admin-form .register-form input[type="submit"] {
+  background-color: black;
+  color: #ebebeb;
+  padding: 10px;
+}
+
+.admin-form .register-form .email-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-form .register-form .password-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-form .register-form .contact-field {
+  display: flex;
+  flex-direction: column;
+}
+/*# sourceMappingURL=admin.css.map */
