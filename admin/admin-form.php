@@ -6,12 +6,12 @@ if(isset($_POST['login'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $check_user = mysqli_query($conn,"SELECT * FROM admin WHERE email = '$email' and password = '$password' ");
+    $check_user = mysqli_query($conn,"SELECT * FROM users WHERE email = '$email' and password = '$password' ");
     $arr = mysqli_fetch_array($check_user);
 
     if($arr>0){
         // echo "Login Success",mysqli_error($conn);
-        $redirect = "/projects/web-hms-php/admin/index.php";
+        $redirect = "projects/hms-project/admin2/";
         $_SESSION['login'] = $email;
         $_SESSION['id'] = $arr;
         $host = $_SERVER['HTTP_HOST'];
@@ -21,7 +21,7 @@ if(isset($_POST['login'])){
     }else{
         // echo "not sucessful";
         $_SESSION['errmsg'] = "Invalid Username or Password!!";
-        $redirect = "/projects/web-hms-php/admin/admin-form.php";
+        $redirect = "projects/hms-project/admin/admin-form.php";
         $host = $_SERVER['HTTP_HOST'];
         $uri = rtrim(dirname($_SERVER['PHP_SELFT']),'/\\');
         header("location:http://$host$uri/$redirect");
