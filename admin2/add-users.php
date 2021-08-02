@@ -3,6 +3,10 @@ session_start();
 error_reporting(0);
 include "../conn.php";
 include "../db_config.php";
+include "../vendor/autoload.php";
+// include "../controllers/verify-email.php";
+
+
 //user account ID's
 $admin_id = admin_id();
 $patient_id = patient_id();
@@ -31,91 +35,166 @@ if(isset($_POST['add-user'])){
 	$contact = $_POST['contact'];
 	$address = $_POST['address'];
 
-//inserting into Database based on the user type selected or account type selected
-	$acct_type = $_POST['acct-type'];
-	switch($acct_type){
-		case '1':
-			$add_user = mysqli_query($conn,"INSERT INTO  users (full_name,age,gender,email,account_id,password,contact,address,userType_id,regDate,updation_date) VALUES('$full_name','$age','$gender','$email','$admin_id','$admin_pass','$contact','$address','$acct_type',now(),NULL) ");
+	// checking if user already exist
+	$check_user = mysqli_query($conn,"SELECT * FROM users WHERE email = '$email'LIMIT 1");
+	$arr = mysqli_fetch_array($check_user);
 
-					if($add_user){
-						$_SESSION['succsmsg'] = "Account added Successfully";
-						mysqli_close($conn);
-					}else{
+	if($arr>0){
+		$_SESSION['alrdyexist'] = "User Already Exists";
+		mysqli_close($conn);
+	}else{
+
+			//inserting into Database based on the user type selected or account type selected
+				$acct_type = $_POST['acct-type'];
+				switch($acct_type){
+					case '1':
+						$add_user = mysqli_query($conn,"INSERT INTO  users (full_name,age,gender,email,account_id,password,contact,address,userType_id,regDate,updation_date) 
+							VALUES('$full_name','$age','$gender','$email','$patient_id','$patient_pass','$contact','$address','$acct_type',now(),NULL) ");
+
+								if($add_user){
+									$_SESSION['succsmsg'] = "Account added Successfully";
+									//sending verification to mail
+									$subject = "Account Verification";
+									$message = "Hi $full_name,\n Welcome to St. Moses Memorial Hospital. \nYour Account ID is $patient_id.\n Your Account Password is $patient_pass. \n Sign In by going to the home page \nNOTICE: \n AFTER SIGNIN YOU ARE REQUIRED TO CHANGE YOUR LOGIN CREDENTIALS
+									";
+									$sender= "From: add.office.stmoses@gmail.com";
+
+									if(mail($email,$subject,$message,$sender)){
+										$_SESSION['mail'] = "Account Details Set to Mail Successfully";
+										exit();
+									}else{
+										$_SESSION['errmail'] = "Mail not Sent!";
+									}
+									mysqli_close($conn);
+
+								}else{
+									$_SESSION['errmsg'] = "ERROR: ". $add_user ."".mysqli_error($conn);
+									mysqli_close($conn);
+								}
+							
+								break;
+					case '2':
+						$add_user = mysqli_query($conn,"INSERT INTO  users (full_name,age,gender,email,account_id,password,contact,address,userType_id,regDate,updation_date) VALUES('$full_name','$age','$gender','$email','$doctor_id','$doctor_pass','$contact','$address','$acct_type',now(),NULL) ");
+
+								if($add_user){
+									$_SESSION['succsmsg'] = "Account added Successfully";
+									//seding verfication to mail
+									$subject = "Account Verification";
+									$message = "Hi $full_name,\n Welcome to St. Moses Memorial Hospital. \nYour Account ID is $doctor_id.\n Your Account Password is $doctor_pass. \n Sign In by going to the home page \nNOTICE: \n AFTER SIGNIN YOU ARE REQUIRED TO CHANGE YOUR LOGIN CREDENTIALS
+									";
+									$sender= "From: add.office.stmoses@gmail.com";
+
+									if(mail($email,$subject,$message,$sender)){
+										$_SESSION['mail'] = "Account Details Set to Mail Successfully";
+										exit();
+									}else{
+										$_SESSION['errmail'] = "Mail not Sent!";
+									}
+									mysqli_close($conn);
+								}else{
+									$_SESSION['errmsg'] = "ERROR: ". $add_user ."".mysqli_error($conn);
+									mysqli_close($conn);
+								}
+								break;
+					case '3':
+						$add_user = mysqli_query($conn,"INSERT INTO  users (full_name,age,gender,email,account_id,password,contact,address,userType_id,regDate,updation_date) VALUES('$full_name','$age','$gender','$email','$nurse_id','$nurse_pass','$contact','$address','$acct_type',now(),NULL) ");
+
+								if($add_user){
+									$_SESSION['succsmsg'] = "Account added Successfully";
+										//seding verfication to mail
+									$subject = "Account Verification";
+									$message = "Hi $full_name,\n Welcome to St. Moses Memorial Hospital. \nYour Account ID is $nurse_id.\n Your Account Password is $nurse_pass. \n Sign In by going to the home page \nNOTICE: \n AFTER SIGNIN YOU ARE REQUIRED TO CHANGE YOUR LOGIN CREDENTIALS
+									";
+									$sender= "From: add.office.stmoses@gmail.com";
+
+									if(mail($email,$subject,$message,$sender)){
+										$_SESSION['mail'] = "Account Details Set to Mail Successfully";
+										exit();
+									}else{
+										$_SESSION['errmail'] = "Mail not Sent!";
+									}
+									mysqli_close($conn);
+								}else{
+									$_SESSION['errmsg'] = "ERROR: ". $add_user ."".mysqli_error($conn);
+									mysqli_close($conn);
+								}
+								break;
+					case '4':
+						$add_user = mysqli_query($conn,"INSERT INTO  users (full_name,age,gender,email,account_id,password,contact,address,userType_id,regDate,updation_date) VALUES('$full_name','$age','$gender','$email','$receptionist_id','$receptionist_pass','$contact','$address','$acct_type',now(),NULL) ");
+
+								if($add_user){
+									$_SESSION['succsmsg'] = "Account added Successfully";
+										//seding verfication to mail
+									$subject = "Account Verification";
+									$message = "Hi $full_name,\n Welcome to St. Moses Memorial Hospital. \nYour Account ID is $receptionist_id.\n Your Account Password is $receptionist_pass. \n Sign In by going to the home page \nNOTICE: \n AFTER SIGNIN YOU ARE REQUIRED TO CHANGE YOUR LOGIN CREDENTIALS
+									";
+									$sender= "From: add.office.stmoses@gmail.com";
+
+									if(mail($email,$subject,$message,$sender)){
+										$_SESSION['mail'] = "Account Details Set to Mail Successfully";
+										exit();
+									}else{
+										$_SESSION['errmail'] = "Mail not Sent!";
+									}
+									mysqli_close($conn);
+								}else{
+									$_SESSION['errmsg'] = "ERROR: ". $add_user ."".mysqli_error($conn);
+									mysqli_close($conn);
+								}
+								break;
+					case '5':
+						$add_user = mysqli_query($conn,"INSERT INTO  users (full_name,age,gender,email,account_id,password,contact,address,userType_id,regDate,updation_date) VALUES('$full_name','$age','$gender','$email','$accountant_id','$accountant_pass','$contact','$address','$acct_type',now(),NULL) ");
+
+								if($add_user){
+									$_SESSION['succsmsg'] = "Account added Successfully";
+										//seding verfication to mail
+									$subject = "Account Verification";
+									$message = "Hi $full_name,\n Welcome to St. Moses Memorial Hospital. \nYour Account ID is $accountant_id.\n Your Account Password is $accountant_pass. \n Sign In by going to the home page \nNOTICE: \n AFTER SIGNIN YOU ARE REQUIRED TO CHANGE YOUR LOGIN CREDENTIALS
+									";
+									$sender= "From: add.office.stmoses@gmail.com";
+
+									if(mail($email,$subject,$message,$sender)){
+										$_SESSION['mail'] = "Account Details Set to Mail Successfully";
+										exit();
+									}else{
+										$_SESSION['errmail'] = "Mail not Sent!";
+									}
+									mysqli_close($conn);
+								}else{
+									$_SESSION['errmsg'] = "ERROR: ". $add_user ."".mysqli_error($conn);
+									mysqli_close($conn);
+								}
+								break;
+					case '6':
+						$add_user = mysqli_query($conn,"INSERT INTO  users (full_name,age,gender,email,account_id,password,contact,address,userType_id,regDate,updation_date) VALUES('$full_name','$age','$gender','$email','$lab_tech_id','$lab_tech_pass','$contact','$address','$acct_type',now(),NULL) ");
+
+								if($add_user){
+									$_SESSION['succsmsg'] = "Account added Successfully";
+										//seding verfication to mail
+									$subject = "Account Verification";
+									$message = "Hi $full_name,\n Welcome to St. Moses Memorial Hospital. \nYour Account ID is $lab_tech_id.\n Your Account Password is $lab_tech_pass. \n Sign In by going to the home page \nNOTICE: \n AFTER SIGNIN YOU ARE REQUIRED TO CHANGE YOUR LOGIN CREDENTIALS
+									";
+									$sender= "From: add.office.stmoses@gmail.com";
+
+									if(mail($email,$subject,$message,$sender)){
+										$_SESSION['mail'] = "Account Details Set to Mail Successfully";
+										exit();
+									}else{
+										$_SESSION['errmail'] = "Mail not Sent!";
+									}
+									mysqli_close($conn);
+								}else{
+									$_SESSION['errmsg'] = "ERROR: ". $add_user ."".mysqli_error($conn);
+									mysqli_close($conn);
+								}
+								break;
+
+					default:
 						$_SESSION['errmsg'] = "ERROR: ". $add_user ."".mysqli_error($conn);
-						mysqli_close($conn);
-					}
-					break;
-		case '2':
-			$add_user = mysqli_query($conn,"INSERT INTO  users (full_name,age,gender,email,account_id,password,contact,address,userType_id,regDate,updation_date) 
-				VALUES('$full_name','$age','$gender','$email','$patient_id','$patient_pass','$contact','$address','$acct_type',now(),NULL) ");
-
-					if($add_user){
 						$_SESSION['succsmsg'] = "Account added Successfully";
-						mysqli_close($conn);
-					}else{
-						$_SESSION['errmsg'] = "ERROR: ". $add_user ."".mysqli_error($conn);
-						mysqli_close($conn);
-					}
-					break;
-		case '3':
-			$add_user = mysqli_query($conn,"INSERT INTO  users (full_name,age,gender,email,account_id,password,contact,address,userType_id,regDate,updation_date) VALUES('$full_name','$age','$gender','$email','$doctor_id','$doctor_pass','$contact','$address','$acct_type',now(),NULL) ");
 
-					if($add_user){
-						$_SESSION['succsmsg'] = "Account added Successfully";
-						mysqli_close($conn);
-					}else{
-						$_SESSION['errmsg'] = "ERROR: ". $add_user ."".mysqli_error($conn);
-						mysqli_close($conn);
-					}
-					break;
-		case '4':
-			$add_user = mysqli_query($conn,"INSERT INTO  users (full_name,age,gender,email,account_id,password,contact,address,userType_id,regDate,updation_date) VALUES('$full_name','$age','$gender','$email','$nurse_id','$nurse_pass','$contact','$address','$acct_type',now(),NULL) ");
 
-					if($add_user){
-						$_SESSION['succsmsg'] = "Account added Successfully";
-						mysqli_close($conn);
-					}else{
-						$_SESSION['errmsg'] = "ERROR: ". $add_user ."".mysqli_error($conn);
-						mysqli_close($conn);
-					}
-					break;
-		case '5':
-			$add_user = mysqli_query($conn,"INSERT INTO  users (full_name,age,gender,email,account_id,password,contact,address,userType_id,regDate,updation_date) VALUES('$full_name','$age','$gender','$email','$receptionist_id','$receptionist_pass','$contact','$address','$acct_type',now(),NULL) ");
-
-					if($add_user){
-						$_SESSION['succsmsg'] = "Account added Successfully";
-						mysqli_close($conn);
-					}else{
-						$_SESSION['errmsg'] = "ERROR: ". $add_user ."".mysqli_error($conn);
-						mysqli_close($conn);
-					}
-					break;
-		case '6':
-			$add_user = mysqli_query($conn,"INSERT INTO  users (full_name,age,gender,email,account_id,password,contact,address,userType_id,regDate,updation_date) VALUES('$full_name','$age','$gender','$email','$accountant_id','$accountant_pass','$contact','$address','$acct_type',now(),NULL) ");
-
-					if($add_user){
-						$_SESSION['succsmsg'] = "Account added Successfully";
-						mysqli_close($conn);
-					}else{
-						$_SESSION['errmsg'] = "ERROR: ". $add_user ."".mysqli_error($conn);
-						mysqli_close($conn);
-					}
-					break;
-		case '7':
-			$add_user = mysqli_query($conn,"INSERT INTO  users (full_name,age,gender,email,account_id,password,contact,address,userType_id,regDate,updation_date) VALUES('$full_name','$age','$gender','$email','$lab_tech_id','$lab_tech_pass','$contact','$address','$acct_type',now(),NULL) ");
-
-					if($add_user){
-						$_SESSION['succsmsg'] = "Account added Successfully";
-						mysqli_close($conn);
-					}else{
-						$_SESSION['errmsg'] = "ERROR: ". $add_user ."".mysqli_error($conn);
-						mysqli_close($conn);
-					}
-					break;
-
-		default:
-			 $_SESSION['errmsg'] = "ERROR: ". $add_user ."".mysqli_error($conn);
-			$_SESSION['succsmsg'] = "Account added Successfully";
+				}
 
 
 	}
@@ -126,11 +205,10 @@ if(isset($_POST['add-user'])){
 <!DOCTYPE html>
 <html lang="en">
     
-<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/blank-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:53 GMT -->
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <title>Mother of God | Add Users</title>
+        <title>St. Moses Memorial Hospital| Add Users</title>
 		
 		<!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
@@ -147,10 +225,6 @@ if(isset($_POST['add-user'])){
 		<!-- Main CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
 		
-		<!--[if lt IE 9]>
-			<script src="assets/js/html5shiv.min.js"></script>
-			<script src="assets/js/respond.min.js"></script>
-		<![endif]-->
     </head>
     <body>
 	
@@ -336,74 +410,7 @@ if(isset($_POST['add-user'])){
 							<li class="menu-title"> 
 								<span>Pages</span>
 							</li>
-							<li> 
-								<a href="profile.html"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="fe fe-document"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="login.php"> Login </a></li>
-									<li><a href="register.php"> Register </a></li>
-									<li><a href="forgot-password.php"> Forgot Password </a></li>
-									<li><a href="lock-screen.php"> Lock Screen </a></li>
-								</ul>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="fe fe-warning"></i> <span> Error Pages </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="error-404.php">404 Error </a></li>
-									<li><a href="error-500.php">500 Error </a></li>
-								</ul>
-							</li>
-							<li class="active"> 
-								<a href="blank-page.php"><i class="fe fe-file"></i> <span>Blank Page</span></a>
-							</li>
-							<li class="menu-title"> 
-								<span>UI Interface</span>
-							</li>
-							<li> 
-								<a href="components.php"><i class="fe fe-vector"></i> <span>Components</span></a>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="fe fe-layout"></i> <span> Forms </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="form-basic-inputs.php">Basic Inputs </a></li>
-									<li><a href="form-input-groups.php">Input Groups </a></li>
-									<li><a href="form-horizontal.html">Horizontal Form </a></li>
-									<li><a href="form-vertical.html"> Vertical Form </a></li>
-									<li><a href="form-mask.html"> Form Mask </a></li>
-									<li><a href="form-validation.html"> Form Validation </a></li>
-								</ul>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="fe fe-table"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="tables-basic.html">Basic Tables </a></li>
-									<li><a href="data-tables.html">Data Table </a></li>
-								</ul>
-							</li>
-							<li class="submenu">
-								<a href="javascript:void(0);"><i class="fe fe-code"></i> <span>Multi Level</span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li class="submenu">
-										<a href="javascript:void(0);"> <span>Level 1</span> <span class="menu-arrow"></span></a>
-										<ul style="display: none;">
-											<li><a href="javascript:void(0);"><span>Level 2</span></a></li>
-											<li class="submenu">
-												<a href="javascript:void(0);"> <span> Level 2</span> <span class="menu-arrow"></span></a>
-												<ul style="display: none;">
-													<li><a href="javascript:void(0);">Level 3</a></li>
-													<li><a href="javascript:void(0);">Level 3</a></li>
-												</ul>
-											</li>
-											<li><a href="javascript:void(0);"> <span>Level 2</span></a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="javascript:void(0);"> <span>Level 1</span></a>
-									</li>
-								</ul>
-							</li>
+							
 						</ul>
 					</div>
                 </div>
@@ -427,14 +434,26 @@ if(isset($_POST['add-user'])){
 						</div>
 					</div>
 					<!-- /Page Header -->
-					<div style=" color: red; padding: 1rem;">
+					<span style=" color: red; padding: 1rem;">
 						<?php echo htmlentities($_SESSION['errmsg']); ?>
 						<?php echo htmlentities($_SESSION['errmsg'] = ""); ?>
-					</div>
-					<div style=" color: green; padding: 1rem;">
+					</span>
+					<span style=" color: green; padding: 1rem;">
 						<?php echo htmlentities($_SESSION['succsmsg']); ?>
 						<?php echo htmlentities($_SESSION['succsmsg'] = ""); ?>
-					</div>
+					</span>
+					<span style=" color: blue; padding: 1rem;">
+						<?php echo htmlentities($_SESSION['alrdyexist']); ?>
+						<?php echo htmlentities($_SESSION['alrdyexist'] = ""); ?>
+					</span>
+					<span style=" color: green; padding: 1rem;">
+						<?php echo htmlentities($_SESSION['mail']); ?>
+						<?php echo htmlentities($_SESSION['mail'] = ""); ?>
+					</span>
+					<span style=" color: red; padding: 1rem;">
+						<?php echo htmlentities($_SESSION['errmail']); ?>
+						<?php echo htmlentities($_SESSION['errmail'] = ""); ?>
+					</span>
 					
 					<div class="row">
 						<div class="col-sm-12">
@@ -479,12 +498,6 @@ if(isset($_POST['add-user'])){
 																			<input type="text" name="contact" class="form-control" placeholder="0550746180" required>
 																		</div>
 																	</div>
-																	<!-- <div class="col-12">
-																		<div class="form-group">
-																			<label>Address</Address></label>
-																			<input type="text" placeholder="Amasaman, Accra - Stadium Junction" class="form-control" required>
-																		</div>
-																	</div> -->
 																	<div class="col-12">
 																		<h5 class="form-title"><span>Address</span></h5>
 																	</div>
@@ -498,39 +511,20 @@ if(isset($_POST['add-user'])){
 																		<div class="form-group">
 																			<label>Select Account Type</label> &nbsp; &nbsp; &nbsp; <br>
 																			<select class="custom-select custom-select-lg " name="acct-type" id="">
-																				<option value="1">Admin</option>
-																				<option value="2">Patient</option>
-																				<option value="3">Doctor</option>
-																				<option value="4">Nurse</option>
-																				<option value="5">Receptionist</option>
-																				<option value="6">Accountant</option>
-																				<option value="7">Lab-Technician</option>
+																				<option value="1">Patient</option>
+																				<option value="2">Doctor</option>
+																				<option value="3">Nurse</option>
+																				<option value="4">Receptionist</option>
+																				<option value="5">Accountant</option>
+																				<option value="6">Lab-Technician</option>
 																			</select>
 																		</div>
 																	</div>
-																	<!-- <div class="col-12 col-sm-6">
-																		<div class="form-group">
-																			<label>State</label>
-																			<input type="text" class="form-control" value="Florida">
-																		</div>
-																	</div>
-																	<div class="col-12 col-sm-6">
-																		<div class="form-group">
-																			<label>Zip Code</label>
-																			<input type="text" class="form-control" value="22434">
-																		</div>
-																	</div>
-																	<div class="col-12 col-sm-6">
-																		<div class="form-group">
-																			<label>Country</label>
-																			<input type="text" class="form-control" value="United States">
-																		</div>
-																	</div> -->
 																</div>
 																<button type="submit" name="add-user" class="btn btn-dark btn-block">Add Users</button>
 															</form>
 														</div>
-													</div>
+													</div><br><br><br>
 						</div>			
 					</div>
 					
@@ -555,6 +549,4 @@ if(isset($_POST['add-user'])){
 		<script  src="assets/js/script.js"></script>
 		
     </body>
-
-<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/blank-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:53 GMT -->
 </html>
