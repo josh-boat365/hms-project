@@ -181,9 +181,6 @@
 								<a href="index.php"><i class="fe fe-home"></i> <span>Dashboard</span></a>
 							</li>
 							<li> 
-								<a href="add-users.php"><i class="fe fe-layout"></i> <span>Add Users</span></a>
-							</li>
-							<li> 
 								<a href="appointment-list.php"><i class="fe fe-layout"></i> <span>Appointments</span></a>
 							</li>
 							<li> 
@@ -210,77 +207,19 @@
 									<li><a href="invoice-report.php">Invoice Reports</a></li>
 								</ul>
 							</li>
-							<li class="menu-title"> 
-								<span>Pages</span>
+							<li class="submenu">
+								<a href="#"><i class="fe fe-users"></i> <span> Users </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="add-users.php"> Add Users </a></li>
+									<li><a href="register.html"> Update User Credentials </a></li>
+									<li><a href="forgot-password.html"> Remove User </a></li>
+									<li><a href="lock-screen.html"> View Users </a></li>
+								</ul>
 							</li>
 							<li> 
 								<a href="profile.php"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
 							</li>
-							<li class="submenu">
-								<a href="#"><i class="fe fe-document"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="login.php"> Login </a></li>
-									<li><a href="register.php"> Register </a></li>
-									<li><a href="forgot-password.php"> Forgot Password </a></li>
-									<li><a href="lock-screen.php"> Lock Screen </a></li>
-								</ul>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="fe fe-warning"></i> <span> Error Pages </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="error-404.php">404 Error </a></li>
-									<li><a href="error-500.php">500 Error </a></li>
-								</ul>
-							</li>
-							<li> 
-								<a href="blank-page.php"><i class="fe fe-file"></i> <span>Blank Page</span></a>
-							</li>
-							<li class="menu-title"> 
-								<span>UI Interface</span>
-							</li>
-							<li> 
-								<a href="components.php"><i class="fe fe-vector"></i> <span>Components</span></a>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="fe fe-layout"></i> <span> Forms </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="form-basic-inputs.php">Basic Inputs </a></li>
-									<li><a href="form-input-groups.php">Input Groups </a></li>
-									<li><a href="form-horizontal.php">Horizontal Form </a></li>
-									<li><a href="form-vertical.php"> Vertical Form </a></li>
-									<li><a href="form-mask.php"> Form Mask </a></li>
-									<li><a href="form-validation.php"> Form Validation </a></li>
-								</ul>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="fe fe-table"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="tables-basic.php">Basic Tables </a></li>
-									<li><a href="data-tables.php">Data Table </a></li>
-								</ul>
-							</li>
-							<li class="submenu">
-								<a href="javascript:void(0);"><i class="fe fe-code"></i> <span>Multi Level</span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li class="submenu">
-										<a href="javascript:void(0);"> <span>Level 1</span> <span class="menu-arrow"></span></a>
-										<ul style="display: none;">
-											<li><a href="javascript:void(0);"><span>Level 2</span></a></li>
-											<li class="submenu">
-												<a href="javascript:void(0);"> <span> Level 2</span> <span class="menu-arrow"></span></a>
-												<ul style="display: none;">
-													<li><a href="javascript:void(0);">Level 3</a></li>
-													<li><a href="javascript:void(0);">Level 3</a></li>
-												</ul>
-											</li>
-											<li><a href="javascript:void(0);"> <span>Level 2</span></a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="javascript:void(0);"> <span>Level 1</span></a>
-									</li>
-								</ul>
-							</li>
+							
 						</ul>
 					</div>
                 </div>

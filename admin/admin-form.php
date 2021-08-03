@@ -20,7 +20,7 @@ if(isset($_POST['login'])){
         exit();
     }else{
         // echo "not sucessful";
-        $_SESSION['errmsg'] = "Invalid Username or Password!!";
+        $_SESSION['errmsg'] = "Wrong Username or Password!!";
         $redirect = "projects/hms-project/admin/admin-form.php";
         $host = $_SERVER['HTTP_HOST'];
         $uri = rtrim(dirname($_SERVER['PHP_SELFT']),'/\\');

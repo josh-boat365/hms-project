@@ -1,5 +1,5 @@
 <?php
-include '/conn.php';
+include 'conn.php';
 $link = $conn;
 
 // $query = "CREATE TABLE users (
