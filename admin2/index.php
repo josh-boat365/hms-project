@@ -40,7 +40,8 @@
 				<!-- Logo -->
                 <div class="header-left">
                     <a href="index.php" class="logo">
-						<img src="assets/img/logo.png" alt="Logo">
+						<!-- <img src="assets/img/logo.png" alt="Logo"> -->
+						<h1>sMMH</h1>
 					</a>
 					<a href="index.php" class="logo logo-small">
 						<img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">

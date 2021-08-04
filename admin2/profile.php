@@ -5,7 +5,7 @@
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <title>Doccure - Profile</title>
+        <title>Profile | St. Moses Memorial Hospital</title>
 		
 		<!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
@@ -37,10 +37,11 @@
 			
 				<!-- Logo -->
                 <div class="header-left">
-                    <a href="index.html" class="logo">
-						<img src="assets/img/logo.png" alt="Logo">
+                    <a href="index.php" class="logo">
+						<!-- <img src="assets/img/logo.png" alt="Logo"> -->
+						<h1>sMMH</h1>
 					</a>
-					<a href="index.html" class="logo logo-small">
+					<a href="index.php" class="logo logo-small">
 						<img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
 					</a>
                 </div>
@@ -154,9 +155,9 @@
 									<p class="text-muted mb-0">Administrator</p>
 								</div>
 							</div>
-							<a class="dropdown-item" href="profile.html">My Profile</a>
-							<a class="dropdown-item" href="settings.html">Settings</a>
-							<a class="dropdown-item" href="login.html">Logout</a>
+							<a class="dropdown-item" href="profile.php">My Profile</a>
+							<a class="dropdown-item" href="settings.php">Settings</a>
+							<a class="dropdown-item" href="login.php">Logout</a>
 						</div>
 					</li>
 					<!-- /User Menu -->
@@ -175,105 +176,41 @@
 								<span>Main</span>
 							</li>
 							<li> 
-								<a href="index.html"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+								<a href="index.php"><i class="fe fe-home"></i> <span>Dashboard</span></a>
 							</li>
 							<li> 
-								<a href="appointment-list.html"><i class="fe fe-layout"></i> <span>Appointments</span></a>
+								<a href="appointment-list.php"><i class="fe fe-layout"></i> <span>Appointments</span></a>
 							</li>
 							<li> 
-								<a href="specialities.html"><i class="fe fe-users"></i> <span>Specialities</span></a>
+								<a href="specialities.php"><i class="fe fe-users"></i> <span>Specialities</span></a>
 							</li>
 							<li> 
-								<a href="doctor-list.html"><i class="fe fe-user-plus"></i> <span>Doctors</span></a>
+								<a href="patient-list.php"><i class="fe fe-user"></i> <span>Patients</span></a>
 							</li>
 							<li> 
-								<a href="patient-list.html"><i class="fe fe-user"></i> <span>Patients</span></a>
+								<a href="doctor-list.php"><i class="fe fe-user-plus"></i> <span>Doctors</span></a>
 							</li>
 							<li> 
-								<a href="reviews.html"><i class="fe fe-star-o"></i> <span>Reviews</span></a>
+								<a href="nurse-list.php"><i class="fe fe-user-plus"></i> <span>Nurse</span></a>
 							</li>
 							<li> 
-								<a href="transactions-list.html"><i class="fe fe-activity"></i> <span>Transactions</span></a>
+								<a href="receptionist-list.php"><i class="fe fe-user"></i> <span>Receptionist</span></a>
 							</li>
 							<li> 
-								<a href="settings.html"><i class="fe fe-vector"></i> <span>Settings</span></a>
+								<a href="accountant-list.php"><i class="fe fe-user"></i> <span>Accountant</span></a>
+							</li>
+							<li> 
+								<a href="lab-technician-list.php"><i class="fe fe-user-plus"></i> <span>Lab Technician</span></a>
 							</li>
 							<li class="submenu">
-								<a href="#"><i class="fe fe-document"></i> <span> Reports</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fe fe-users"></i> <span> Users </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="invoice-report.html">Invoice Reports</a></li>
-								</ul>
-							</li>
-							<li class="menu-title"> 
-								<span>Pages</span>
-							</li>
-							<li class="active"> 
-								<a href="profile.html"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="fe fe-document"></i> <span> Authentication </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="login.html"> Login </a></li>
-									<li><a href="register.html"> Register </a></li>
-									<li><a href="forgot-password.html"> Forgot Password </a></li>
-									<li><a href="lock-screen.html"> Lock Screen </a></li>
-								</ul>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="fe fe-warning"></i> <span> Error Pages </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="error-404.html">404 Error </a></li>
-									<li><a href="error-500.html">500 Error </a></li>
+									<li><a href="add-users.php"> Add Users </a></li>
+									<li><a href="view-users.php"> View Users </a></li>
 								</ul>
 							</li>
 							<li> 
-								<a href="blank-page.html"><i class="fe fe-file"></i> <span>Blank Page</span></a>
-							</li>
-							<li class="menu-title"> 
-								<span>UI Interface</span>
-							</li>
-							<li> 
-								<a href="components.html"><i class="fe fe-vector"></i> <span>Components</span></a>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="fe fe-layout"></i> <span> Forms </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="form-basic-inputs.html">Basic Inputs </a></li>
-									<li><a href="form-input-groups.html">Input Groups </a></li>
-									<li><a href="form-horizontal.html">Horizontal Form </a></li>
-									<li><a href="form-vertical.html"> Vertical Form </a></li>
-									<li><a href="form-mask.html"> Form Mask </a></li>
-									<li><a href="form-validation.html"> Form Validation </a></li>
-								</ul>
-							</li>
-							<li class="submenu">
-								<a href="#"><i class="fe fe-table"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="tables-basic.html">Basic Tables </a></li>
-									<li><a href="data-tables.html">Data Table </a></li>
-								</ul>
-							</li>
-							<li class="submenu">
-								<a href="javascript:void(0);"><i class="fe fe-code"></i> <span>Multi Level</span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li class="submenu">
-										<a href="javascript:void(0);"> <span>Level 1</span> <span class="menu-arrow"></span></a>
-										<ul style="display: none;">
-											<li><a href="javascript:void(0);"><span>Level 2</span></a></li>
-											<li class="submenu">
-												<a href="javascript:void(0);"> <span> Level 2</span> <span class="menu-arrow"></span></a>
-												<ul style="display: none;">
-													<li><a href="javascript:void(0);">Level 3</a></li>
-													<li><a href="javascript:void(0);">Level 3</a></li>
-												</ul>
-											</li>
-											<li><a href="javascript:void(0);"> <span>Level 2</span></a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="javascript:void(0);"> <span>Level 1</span></a>
-									</li>
-								</ul>
+								<a href="profile.php"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
 							</li>
 						</ul>
 					</div>

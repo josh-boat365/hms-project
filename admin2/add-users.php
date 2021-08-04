@@ -4,7 +4,7 @@ error_reporting(0);
 include "../conn.php";
 include "../db_config.php";
 include "../vendor/autoload.php";
-// include "../controllers/verify-email.php";
+
 
 
 //user account ID's
