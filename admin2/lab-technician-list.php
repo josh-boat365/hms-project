@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     
-<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/appointment-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:46 GMT -->
+<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/doctor-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:51 GMT -->
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <title>St. Moses Memorial Hospital - Appointment List Page</title>
+        <title>Doccure - Doctor List Page</title>
 		
 		<!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
@@ -68,7 +68,7 @@
 				
 				<!-- Header Right Menu -->
 				<ul class="nav user-menu">
-					
+
 					<!-- Notifications -->
 					<li class="nav-item dropdown noti-dropdown">
 						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
@@ -157,9 +157,9 @@
 									<p class="text-muted mb-0">Administrator</p>
 								</div>
 							</div>
-							<a class="dropdown-item" href="profile.html">My Profile</a>
-							<a class="dropdown-item" href="settings.html">Settings</a>
-							<a class="dropdown-item" href="login.html">Logout</a>
+							<a class="dropdown-item" href="profile.php">My Profile</a>
+							<a class="dropdown-item" href="settings.php">Settings</a>
+							<a class="dropdown-item" href="login.php">Logout</a>
 						</div>
 					</li>
 					<!-- /User Menu -->
@@ -181,7 +181,7 @@
 							<li> 
 								<a href="index.php"><i class="fe fe-home"></i> <span>Dashboard</span></a>
 							</li>
-							<li class="active"> 
+							<li> 
 								<a href="appointment-list.php"><i class="fe fe-layout"></i> <span>Appointments</span></a>
 							</li>
 							<li> 
@@ -214,7 +214,8 @@
 							</li>
 							<li> 
 								<a href="profile.php"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
-							</li>		
+							</li>
+							</li>
 						</ul>
 					</div>
                 </div>
@@ -229,19 +230,19 @@
 					<div class="page-header">
 						<div class="row">
 							<div class="col-sm-12">
-								<h3 class="page-title">Appointments</h3>
+								<h3 class="page-title">List of Doctors</h3>
 								<ul class="breadcrumb">
 									<li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-									<li class="breadcrumb-item active">Appointments</li>
+									<li class="breadcrumb-item"><a href="javascript:(0);">Users</a></li>
+									<li class="breadcrumb-item active">Doctor</li>
 								</ul>
 							</div>
 						</div>
 					</div>
 					<!-- /Page Header -->
+					
 					<div class="row">
-						<div class="col-md-12">
-						
-							<!-- Recent Orders -->
+						<div class="col-sm-12">
 							<div class="card">
 								<div class="card-body">
 									<div class="table-responsive">
@@ -250,10 +251,10 @@
 												<tr>
 													<th>Doctor Name</th>
 													<th>Speciality</th>
-													<th>Patient Name</th>
-													<th>Apointment Time</th>
-													<th>Status</th>
-													<th class="text-right">Amount</th>
+													<th>Member Since</th>
+													<th>Earned</th>
+													<th>Account Status</th>
+													
 												</tr>
 											</thead>
 											<tbody>
@@ -261,101 +262,80 @@
 													<td>
 														<h2 class="table-avatar">
 															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-01.jpg" alt="User Image"></a>
-															<a href="profile.html">Dr. Ruby Perrin</a>
+															<a href="profile.php">Dr. Ruby Perrin</a>
 														</h2>
 													</td>
 													<td>Dental</td>
-													<td>
-														<h2 class="table-avatar">
-															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient1.jpg" alt="User Image"></a>
-															<a href="profile.php">Charlene Reed </a>
-														</h2>
-													</td>
-													<td>9 Nov 2019 <span class="text-primary d-block">11.00 AM - 11.15 AM</span></td>
+													
+													<td>14 Jan 2019 <br><small>02.59 AM</small></td>
+													
+													<td>$3100.00</td>
+													
 													<td>
 														<div class="status-toggle">
 															<input type="checkbox" id="status_1" class="check" checked>
 															<label for="status_1" class="checktoggle">checkbox</label>
 														</div>
 													</td>
-													<td class="text-right">
-														$200.00
-													</td>
 												</tr>
 												<tr>
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-02.jpg" alt="User Image"></a>
+															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-02.jpg" alt="User Image"></a>
 															<a href="profile.php">Dr. Darren Elder</a>
 														</h2>
 													</td>
 													<td>Dental</td>
-													<td>
-														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient2.jpg" alt="User Image"></a>
-															<a href="profile.php">Travis Trimble </a>
-														</h2>
-													</td>
 													
-													<td>5 Nov 2019 <span class="text-primary d-block">11.00 AM - 11.35 AM</span></td>
+													<td>11 Jun 2019 <br><small>4.50 AM</small></td>
+													
+													<td>$5000.00</td>
+													
 													<td>
 														<div class="status-toggle">
-															<input type="checkbox" id="status_2" class="check" checked>
-															<label for="status_2" class="checktoggle">checkbox</label>
+															<input type="checkbox" id="status_1" class="check" checked>
+															<label for="status_1" class="checktoggle">checkbox</label>
 														</div>
-													</td>
-													<td class="text-right">
-														$300.00
 													</td>
 												</tr>
 												<tr>
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-03.jpg" alt="User Image"></a>
+															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-03.jpg" alt="User Image"></a>
 															<a href="profile.php">Dr. Deborah Angel</a>
 														</h2>
 													</td>
 													<td>Cardiology</td>
-													<td>
-														<h2 class="table-avatar">
-															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient3.jpg" alt="User Image"></a>
-															<a href="profile.php">Carl Kelly</a>
-														</h2>
-													</td>
-													<td>11 Nov 2019 <span class="text-primary d-block">12.00 PM - 12.15 PM</span></td>
+													
+													<td>4 Jan 2018 <br><small>9.40 AM</small></td>
+													
+													<td>$3300.00</td>
+													
 													<td>
 														<div class="status-toggle">
-															<input type="checkbox" id="status_3" class="check" checked>
-															<label for="status_3" class="checktoggle">checkbox</label>
+															<input type="checkbox" id="status_1" class="check" checked>
+															<label for="status_1" class="checktoggle">checkbox</label>
 														</div>
-													</td>
-													<td class="text-right">
-														$150.00
 													</td>
 												</tr>
 												<tr>
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-04.jpg" alt="User Image"></a>
+															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-04.jpg" alt="User Image"></a>
 															<a href="profile.php">Dr. Sofia Brient</a>
 														</h2>
 													</td>
 													<td>Urology</td>
-													<td>
-														<h2 class="table-avatar">
-															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient4.jpg" alt="User Image"></a>
-															<a href="profile.php"> Michelle Fairfax</a>
-														</h2>
-													</td>
-													<td>7 Nov 2019 <span class="text-primary d-block">1.00 PM - 1.20 PM</span></td>
+													
+													<td>5 Jul 2019 <br><small>12.59 AM</small></td>
+													
+													<td>$3500.00</td>
+													
 													<td>
 														<div class="status-toggle">
-															<input type="checkbox" id="status_4" class="check" checked>
-															<label for="status_4" class="checktoggle">checkbox</label>
+															<input type="checkbox" id="status_1" class="check" checked>
+															<label for="status_1" class="checktoggle">checkbox</label>
 														</div>
-													</td>
-													<td class="text-right">
-														$150.00
 													</td>
 												</tr>
 												<tr>
@@ -366,22 +346,16 @@
 														</h2>
 													</td>
 													<td>Orthopaedics</td>
-													<td>
-														<h2 class="table-avatar">
-															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient5.jpg" alt="User Image"></a>
-															<a href="profile.php">Gina Moore</a>
-														</h2>
-													</td>
 													
-													<td>15 Nov 2019 <span class="text-primary d-block">1.00 PM - 1.15 PM</span></td>
+													<td>24 Jan 2019 <br><small>02.59 AM</small></td>
+													
+													<td>$3700.00</td>
+													
 													<td>
 														<div class="status-toggle">
-															<input type="checkbox" id="status_5" class="check" checked>
-															<label for="status_5" class="checktoggle">checkbox</label>
+															<input type="checkbox" id="status_1" class="check" checked>
+															<label for="status_1" class="checktoggle">checkbox</label>
 														</div>
-													</td>
-													<td class="text-right">
-														$200.00
 													</td>
 												</tr>
 												<tr>
@@ -392,22 +366,16 @@
 														</h2>
 													</td>
 													<td>Orthopaedics</td>
-													<td>
-														<h2 class="table-avatar">
-															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient6.jpg" alt="User Image"></a>
-															<a href="profile.php">Elsie Gilley</a>
-														</h2>
-													</td>
 													
-													<td>16 Nov 2019 <span class="text-primary d-block">1.00 PM - 1.15 PM</span></td>
+													<td>23 Mar 2019 <br><small>02.50 PM</small></td>
+													
+													<td>$4000.00</td>
+													
 													<td>
 														<div class="status-toggle">
-															<input type="checkbox" id="status_5" class="check" checked>
-															<label for="status_5" class="checktoggle">checkbox</label>
+															<input type="checkbox" id="status_1" class="check" checked>
+															<label for="status_1" class="checktoggle">checkbox</label>
 														</div>
-													</td>
-													<td class="text-right">
-														$250.00
 													</td>
 												</tr>
 												<tr>
@@ -418,22 +386,16 @@
 														</h2>
 													</td>
 													<td>Neurology</td>
-													<td>
-														<h2 class="table-avatar">
-															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient7.jpg" alt="User Image"></a>
-															<a href="profile.php">Joan Gardner</a>
-														</h2>
-													</td>
 													
-													<td>18 Nov 2019 <span class="text-primary d-block">1.10 PM - 1.25 PM</span></td>
+													<td>14 Dec 2018 <br><small>01.59 AM</small></td>
+													
+													<td>$2000.00</td>
+													
 													<td>
 														<div class="status-toggle">
-															<input type="checkbox" id="status_5" class="check" checked>
-															<label for="status_5" class="checktoggle">checkbox</label>
+															<input type="checkbox" id="status_1" class="check" checked>
+															<label for="status_1" class="checktoggle">checkbox</label>
 														</div>
-													</td>
-													<td class="text-right">
-														$260.00
 													</td>
 												</tr>
 												<tr>
@@ -444,22 +406,16 @@
 														</h2>
 													</td>
 													<td>Dermatology</td>
-													<td>
-														<h2 class="table-avatar">
-															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient8.jpg" alt="User Image"></a>
-															<a href="profile.php"> Daniel Griffing</a>
-														</h2>
-													</td>
 													
-													<td>18 Nov 2019 <span class="text-primary d-block">11.10 AM - 11.25 AM</span></td>
+													<td>11 Jan 2019 <br><small>02.59 AM</small></td>
+													
+													<td>$3000.00</td>
+													
 													<td>
 														<div class="status-toggle">
-															<input type="checkbox" id="status_5" class="check" checked>
-															<label for="status_5" class="checktoggle">checkbox</label>
+															<input type="checkbox" id="status_1" class="check" checked>
+															<label for="status_1" class="checktoggle">checkbox</label>
 														</div>
-													</td>
-													<td class="text-right">
-														$260.00
 													</td>
 												</tr>
 												<tr>
@@ -470,22 +426,16 @@
 														</h2>
 													</td>
 													<td>Dental</td>
-													<td>
-														<h2 class="table-avatar">
-															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient9.jpg" alt="User Image"></a>
-															<a href="profile.php">Walter Roberson</a>
-														</h2>
-													</td>
 													
-													<td>21 Nov 2019 <span class="text-primary d-block">12.10 PM - 12.25 PM</span></td>
+													<td>21 Apr 2018 <br><small>02.59 PM</small></td>
+													
+													<td>$4100.00</td>
+													
 													<td>
 														<div class="status-toggle">
-															<input type="checkbox" id="status_5" class="check" checked>
-															<label for="status_5" class="checktoggle">checkbox</label>
+															<input type="checkbox" id="status_1" class="check" checked>
+															<label for="status_1" class="checktoggle">checkbox</label>
 														</div>
-													</td>
-													<td class="text-right">
-														$300.00
 													</td>
 												</tr>
 												<tr>
@@ -496,22 +446,16 @@
 														</h2>
 													</td>
 													<td>Dental</td>
-													<td>
-														<h2 class="table-avatar">
-															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient10.jpg" alt="User Image"></a>
-															<a href="profile.php">Robert Rhodes</a>
-														</h2>
-													</td>
 													
-													<td>23 Nov 2019 <span class="text-primary d-block">12.10 PM - 12.25 PM</span></td>
+													<td>15 Feb 2018 <br><small>03.59 AM</small></td>
+													
+													<td>$3500.00</td>
+													
 													<td>
 														<div class="status-toggle">
-															<input type="checkbox" id="status_5" class="check" checked>
-															<label for="status_5" class="checktoggle">checkbox</label>
+															<input type="checkbox" id="status_1" class="check" checked>
+															<label for="status_1" class="checktoggle">checkbox</label>
 														</div>
-													</td>
-													<td class="text-right">
-														$300.00
 													</td>
 												</tr>
 											</tbody>
@@ -519,10 +463,9 @@
 									</div>
 								</div>
 							</div>
-							<!-- /Recent Orders -->
-							
-						</div>
+						</div>			
 					</div>
+					
 				</div>			
 			</div>
 			<!-- /Page Wrapper -->
@@ -549,5 +492,5 @@
 		
     </body>
 
-<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/appointment-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:49 GMT -->
+<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/doctor-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:51 GMT -->
 </html>

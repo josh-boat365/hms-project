@@ -179,48 +179,42 @@
 								<span>Main</span>
 							</li>
 							<li> 
-								<a href="index.html"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+								<a href="index.php"><i class="fe fe-home"></i> <span>Dashboard</span></a>
 							</li>
 							<li> 
-								<a href="appointment-list.html"><i class="fe fe-layout"></i> <span>Appointments</span></a>
+								<a href="appointment-list.php"><i class="fe fe-layout"></i> <span>Appointments</span></a>
 							</li>
 							<li class="active"> 
-								<a href="specialities.html"><i class="fe fe-users"></i> <span>Specialities</span></a>
+								<a href="specialities.php"><i class="fe fe-users"></i> <span>Specialities</span></a>
 							</li>
 							<li> 
-								<a href="doctor-list.html"><i class="fe fe-user-plus"></i> <span>Doctors</span></a>
+								<a href="patient-list.php"><i class="fe fe-user"></i> <span>Patients</span></a>
 							</li>
 							<li> 
-								<a href="patient-list.html"><i class="fe fe-user"></i> <span>Patients</span></a>
+								<a href="doctor-list.php"><i class="fe fe-user-plus"></i> <span>Doctors</span></a>
 							</li>
 							<li> 
-								<a href="reviews.html"><i class="fe fe-star-o"></i> <span>Reviews</span></a>
+								<a href="nurse-list.php"><i class="fe fe-user-plus"></i> <span>Nurse</span></a>
 							</li>
 							<li> 
-								<a href="transactions-list.html"><i class="fe fe-activity"></i> <span>Transactions</span></a>
+								<a href="receptionist-list.php"><i class="fe fe-user"></i> <span>Receptionist</span></a>
 							</li>
 							<li> 
-								<a href="settings.html"><i class="fe fe-vector"></i> <span>Settings</span></a>
+								<a href="accountant-list.php"><i class="fe fe-user"></i> <span>Accountant</span></a>
+							</li>
+							<li> 
+								<a href="lab-technician-list.php"><i class="fe fe-user-plus"></i> <span>Lab Technician</span></a>
 							</li>
 							<li class="submenu">
-								<a href="#"><i class="fe fe-document"></i> <span> Reports</span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="invoice-report.html">Invoice Reports</a></li>
-								</ul>
-							</li>
-						<li class="submenu">
 								<a href="#"><i class="fe fe-users"></i> <span> Users </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="add-users.php"> Add Users </a></li>
-									<li><a href="register.html"> Update User Credentials </a></li>
-									<li><a href="forgot-password.html"> Remove User </a></li>
-									<li><a href="lock-screen.html"> View Users </a></li>
+									<li><a href="view-users.php"> View Users </a></li>
 								</ul>
 							</li>
 							<li> 
-								<a href="profile.html"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
+								<a href="profile.php"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
 							</li>
-							
 							</li>
 						</ul>
 					</div>
@@ -267,10 +261,10 @@
 													
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2">
+															<a href="profile.php" class="avatar avatar-sm mr-2">
 																<img class="avatar-img" src="assets/img/specialities/specialities-01.png" alt="Speciality">
 															</a>
-															<a href="profile.html">Urology</a>
+															<a href="profile.php">Urology</a>
 														</h2>
 													</td>
 												
@@ -290,10 +284,10 @@
 													
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2">
+															<a href="profile.php" class="avatar avatar-sm mr-2">
 																<img class="avatar-img" src="assets/img/specialities/specialities-02.png" alt="Speciality">
 															</a>
-															<a href="profile.html">Neurology</a>
+															<a href="profile.php">Neurology</a>
 														</h2>
 													</td>
 												
@@ -313,10 +307,10 @@
 													
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2">
+															<a href="profile.php" class="avatar avatar-sm mr-2">
 																<img class="avatar-img" src="assets/img/specialities/specialities-03.png" alt="Speciality">
 															</a>
-															<a href="profile.html">Orthopedic</a>
+															<a href="profile.php">Orthopedic</a>
 														</h2>
 													</td>
 												
@@ -336,10 +330,10 @@
 													
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2">
+															<a href="profile.php" class="avatar avatar-sm mr-2">
 																<img class="avatar-img" src="assets/img/specialities/specialities-04.png" alt="Speciality">
 															</a>
-															<a href="profile.html">Cardiologist</a>
+															<a href="profile.php">Cardiologist</a>
 														</h2>
 													</td>
 												
@@ -359,10 +353,10 @@
 													
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2">
+															<a href="profile.php" class="avatar avatar-sm mr-2">
 																<img class="avatar-img" src="assets/img/specialities/specialities-05.png" alt="Speciality">
 															</a>
-															<a href="profile.html">Dentist</a>
+															<a href="profile.php">Dentist</a>
 														</h2>
 													</td>
 												

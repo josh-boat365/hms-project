@@ -40,10 +40,10 @@
 			
 				<!-- Logo -->
                 <div class="header-left">
-                    <a href="index.html" class="logo">
+                    <a href="index.php" class="logo">
 						<img src="assets/img/logo.png" alt="Logo">
 					</a>
-					<a href="index.html" class="logo logo-small">
+					<a href="index.php" class="logo logo-small">
 						<img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
 					</a>
                 </div>
@@ -179,48 +179,42 @@
 								<span>Main</span>
 							</li>
 							<li> 
-								<a href="index.html"><i class="fe fe-home"></i> <span>Dashboard</span></a>
+								<a href="index.php"><i class="fe fe-home"></i> <span>Dashboard</span></a>
 							</li>
 							<li> 
-								<a href="appointment-list.html"><i class="fe fe-layout"></i> <span>Appointments</span></a>
+								<a href="appointment-list.php"><i class="fe fe-layout"></i> <span>Appointments</span></a>
 							</li>
 							<li> 
-								<a href="specialities.html"><i class="fe fe-users"></i> <span>Specialities</span></a>
+								<a href="specialities.php"><i class="fe fe-users"></i> <span>Specialities</span></a>
 							</li>
 							<li> 
-								<a href="doctor-list.html"><i class="fe fe-user-plus"></i> <span>Doctors</span></a>
-							</li>
-							<li class="active"> 
-								<a href="patient-list.html"><i class="fe fe-user"></i> <span>Patients</span></a>
+								<a href="patient-list.php"><i class="fe fe-user"></i> <span>Patients</span></a>
 							</li>
 							<li> 
-								<a href="reviews.html"><i class="fe fe-star-o"></i> <span>Reviews</span></a>
+								<a href="doctor-list.php"><i class="fe fe-user-plus"></i> <span>Doctors</span></a>
 							</li>
 							<li> 
-								<a href="transactions-list.html"><i class="fe fe-activity"></i> <span>Transactions</span></a>
+								<a href="nurse-list.php"><i class="fe fe-user-plus"></i> <span>Nurse</span></a>
 							</li>
 							<li> 
-								<a href="settings.html"><i class="fe fe-vector"></i> <span>Settings</span></a>
+								<a href="receptionist-list.php"><i class="fe fe-user"></i> <span>Receptionist</span></a>
 							</li>
-							<li class="submenu">
-								<a href="#"><i class="fe fe-document"></i> <span> Reports</span> <span class="menu-arrow"></span></a>
-								<ul style="display: none;">
-									<li><a href="invoice-report.html">Invoice Reports</a></li>
-								</ul>
+							<li> 
+								<a href="accountant-list.php"><i class="fe fe-user"></i> <span>Accountant</span></a>
+							</li>
+							<li> 
+								<a href="lab-technician-list.php"><i class="fe fe-user-plus"></i> <span>Lab Technician</span></a>
 							</li>
 							<li class="submenu">
 								<a href="#"><i class="fe fe-users"></i> <span> Users </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="add-users.php"> Add Users </a></li>
-									<li><a href="register.html"> Update User Credentials </a></li>
-									<li><a href="forgot-password.html"> Remove User </a></li>
-									<li><a href="lock-screen.html"> View Users </a></li>
+									<li><a href="view-users.php"> View Users </a></li>
 								</ul>
 							</li>
 							<li> 
-								<a href="profile.html"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
-							</li>	
-								
+								<a href="profile.php"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
+							</li>
 							</li>
 						</ul>
 					</div>
@@ -270,8 +264,8 @@
 													<td>#PT001</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient1.jpg" alt="User Image"></a>
-															<a href="profile.html">Charlene Reed </a>
+															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient1.jpg" alt="User Image"></a>
+															<a href="profile.php">Charlene Reed </a>
 														</h2>
 													</td>
 													<td>29</td>
@@ -284,8 +278,8 @@
 													<td>#PT002</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient2.jpg" alt="User Image"></a>
-															<a href="profile.html">Travis Trimble </a>
+															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient2.jpg" alt="User Image"></a>
+															<a href="profile.php">Travis Trimble </a>
 														</h2>
 													</td>
 													<td>23</td>
@@ -298,8 +292,8 @@
 													<td>#PT003</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient3.jpg" alt="User Image"></a>
-															<a href="profile.html">Carl Kelly</a>
+															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient3.jpg" alt="User Image"></a>
+															<a href="profile.php">Carl Kelly</a>
 														</h2>
 													</td>
 													<td>29</td>
@@ -312,8 +306,8 @@
 													<td>#PT004</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient4.jpg" alt="User Image"></a>
-															<a href="profile.html"> Michelle Fairfax</a>
+															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient4.jpg" alt="User Image"></a>
+															<a href="profile.php"> Michelle Fairfax</a>
 														</h2>
 													</td>
 													<td>25</td>
@@ -326,8 +320,8 @@
 													<td>#PT005</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient5.jpg" alt="User Image"></a>
-															<a href="profile.html">Gina Moore</a>
+															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient5.jpg" alt="User Image"></a>
+															<a href="profile.php">Gina Moore</a>
 														</h2>
 													</td>
 													<td>23</td>
@@ -340,8 +334,8 @@
 													<td>#PT006</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient6.jpg" alt="User Image"></a>
-															<a href="profile.html">Elsie Gilley</a>
+															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient6.jpg" alt="User Image"></a>
+															<a href="profile.php">Elsie Gilley</a>
 														</h2>
 													</td>
 													<td>16</td>
@@ -354,8 +348,8 @@
 													<td>#PT007</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient7.jpg" alt="User Image"></a>
-															<a href="profile.html"> Joan Gardner</a>
+															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient7.jpg" alt="User Image"></a>
+															<a href="profile.php"> Joan Gardner</a>
 														</h2>
 													</td>
 													<td>25</td>
@@ -368,8 +362,8 @@
 													<td>#PT008</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient8.jpg" alt="User Image"></a>
-															<a href="profile.html"> Daniel Griffing</a>
+															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient8.jpg" alt="User Image"></a>
+															<a href="profile.php"> Daniel Griffing</a>
 														</h2>
 													</td>
 													<td>21</td>
@@ -382,8 +376,8 @@
 													<td>#PT009</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient9.jpg" alt="User Image"></a>
-															<a href="profile.html">Walter Roberson</a>
+															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient9.jpg" alt="User Image"></a>
+															<a href="profile.php">Walter Roberson</a>
 														</h2>
 													</td>
 													<td>18</td>
@@ -396,8 +390,8 @@
 													<td>#PT010</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient10.jpg" alt="User Image"></a>
-															<a href="profile.html">Robert Rhodes</a>
+															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient10.jpg" alt="User Image"></a>
+															<a href="profile.php">Robert Rhodes</a>
 														</h2>
 													</td>
 													<td>19</td>
@@ -410,8 +404,8 @@
 													<td>#PT011</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient11.jpg" alt="User Image"></a>
-															<a href="profile.html">Harry Williams</a>
+															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient11.jpg" alt="User Image"></a>
+															<a href="profile.php">Harry Williams</a>
 														</h2>
 													</td>
 													<td>9</td>
@@ -424,8 +418,8 @@
 													<td>#PT012</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient12.jpg" alt="User Image"></a>
-															<a href="profile.html">Robert Johnston</a>
+															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient12.jpg" alt="User Image"></a>
+															<a href="profile.php">Robert Johnston</a>
 														</h2>
 													</td>
 													<td>29</td>
@@ -438,8 +432,8 @@
 													<td>#PT013</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient13.jpg" alt="User Image"></a>
-															<a href="profile.html">Tracy Mason</a>
+															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient13.jpg" alt="User Image"></a>
+															<a href="profile.php">Tracy Mason</a>
 														</h2>
 													</td>
 													<td>32</td>
@@ -452,8 +446,8 @@
 													<td>#PT014</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient14.jpg" alt="User Image"></a>
-															<a href="profile.html"> Daniel Finch</a>
+															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient14.jpg" alt="User Image"></a>
+															<a href="profile.php"> Daniel Finch</a>
 														</h2>
 													</td>
 													<td>23</td>
@@ -466,8 +460,8 @@
 													<td>#PT015</td>
 													<td>
 														<h2 class="table-avatar">
-															<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient15.jpg" alt="User Image"></a>
-															<a href="profile.html">Jessica Garza</a>
+															<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient15.jpg" alt="User Image"></a>
+															<a href="profile.php">Jessica Garza</a>
 														</h2>
 													</td>
 													<td>10</td>
