@@ -1,4 +1,28 @@
-<?php require_once "controllerUserData.php"; ?>
+<?php 
+    // require_once "controllerUserData.php";
+    include_once "../conn.php";
+    
+    if(isset($_POST['login'])){
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+            $get_data = mysqli_query($conn, "SELECT * FROM users WHERE email = {$email} AND pasword = {$password}");
+            //    $test = print_r($get_data);
+
+            //    echo $test;
+            // if(mysqli_num_rows($get_data) > 0){
+                    $row = mysqli_fetch_assoc($get_data);
+                    
+                    header("location: ../index.php");
+                // }
+                // else{
+                    // echo "invalid login";
+                // }
+
+    }else{
+        echo "not getting data";
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,21 +38,9 @@
                 <form action="login-user.php" method="POST" autocomplete="">
                     <h2 class="text-center">Login Form</h2>
                     <p class="text-center">Login with your email and password.</p>
-                    <?php
-                    if(count($errors) > 0){
-                        ?>
-                        <div class="alert alert-danger text-center">
-                            <?php
-                            foreach($errors as $showerror){
-                                echo $showerror;
-                            }
-                            ?>
-                        </div>
-                        <?php
-                    }
-                    ?>
+                    
                     <div class="form-group">
-                        <input class="form-control" type="email" name="email" placeholder="Email Address" required value="<?php echo $email ?>">
+                        <input class="form-control" type="email" name="email" placeholder="Email Address" required value="">
                     </div>
                     <div class="form-group">
                         <input class="form-control" type="password" name="password" placeholder="Password" required>
