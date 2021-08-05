@@ -126,7 +126,7 @@ if (isset($_POST['submit'])){
                     <li><a href="#team" class="smoothScroll">Doctors</a></li>
                     <li><a href="#news" class="smoothScroll">News</a></li>
                     <li><a href="#google-map" class="smoothScroll">Contact</a></li>
-                    <li><a href="#" class="smoothScroll">SigIn/SignUp</a></li>
+                    <li><a href="./auth/signup-user.php" class="smoothScroll">SigIn/SignUp</a></li>
                     <li class="appointment-btn"><a href="#appointment">Make an appointment</a></li>
                 </ul>
             </div>

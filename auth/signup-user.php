@@ -1,42 +1,4 @@
-<?php 
-// require_once "controllerUserData.php";
-include_once "../conn.php";
-include_once "../db_config.php";
-
-session_start();
-error_reporting(0);
-
-if(isset($_POST['signup'])){
-    $name =  $_POST['name'];
-    $age =  $_POST['age'];
-    $gender =  $_POST['gender'];
-    $email =  $_POST['email'];
-    $contact =  $_POST['contact'];
-    $address =  $_POST['address'];
-    $password =  $_POST['password'];
-    
-    $check_user = mysqli_query($conn,"SELECT * FROM users WHERE email = '$email'LIMIT 1");
-	$arr = mysqli_fetch_array($check_user);
-
-    if($arr>0){
-		$_SESSION['alrdyexist'] = "User Already Exists";
-		mysqli_close($conn);
-	}else{
-        $insert_data = "INSERT INTO users (full_name, age, gender, email, account_id, contact, address,password, usertype, regDate, updation_date, status)
-        values('$name', '$age', '$gender','$email', '$account_id', '$contact', '$address','$password', '1', NOW(), NULL, 'Active')";
-        if($insert_data){
-            $_SESSION['success'] = "Account Created Succesfully";
-            mysqli_close($conn);
-        }
-        else{
-            $_SESSION['error'] = "Data not inserted";
-        }
-        
-    }
-
-
- ?>
-
+<?php require_once "controllerUserData.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,21 +14,31 @@ if(isset($_POST['signup'])){
                 <form action="signup-user.php" method="POST" autocomplete="">
                     <h2 class="text-center">Signup Form</h2>
                     <p class="text-center">It's quick and easy.</p>
-                    <span class="alert alert-success text-center">
-                        <?php echo htmlentities($_SESSION['alrdyexist']) ?>
-                        <?php echo htmlentities($_SESSION['alrdyexist'] = ""); ?>
-                    </span>
-                    <span class="alert alert-success text-center">
-                        <?php echo htmlentities($_SESSION['success']) ?>
-                        <?php echo htmlentities($_SESSION['success'] = ""); ?>
-                    </span>
-                    <span class="alert alert-danger text-center">
-                        <?php echo htmlentities($_SESSION['error']) ?>
-                        <?php echo htmlentities($_SESSION['error'] = ""); ?>
-                    </span>
-                    
-                    
-                   
+                    <?php
+                    if(count($errors) == 1){
+                        ?>
+                        <div class="alert alert-danger text-center">
+                            <?php
+                            foreach($errors as $showerror){
+                                echo $showerror;
+                            }
+                            ?>
+                        </div>
+                        <?php
+                    }elseif(count($errors) > 1){
+                        ?>
+                        <div class="alert alert-danger">
+                            <?php
+                            foreach($errors as $showerror){
+                                ?>
+                                <li><?php echo $showerror; ?></li>
+                                <?php
+                            }
+                            ?>
+                        </div>
+                        <?php
+                    }
+                    ?>
                     <div class="form-group">
                         <input class="form-control" type="text" name="name" placeholder="Full Name" required value="<?php echo $name ?>">
                     </div>
