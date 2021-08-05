@@ -36,14 +36,19 @@ $errors = array();
             $status = "notverified";
             // $insert_data = "INSERT INTO users (full_name, email, password, code, status)
             //                 values('$name', '$email', '$encpass', '$code', '$status')";
-            $insert_data = "INSERT INTO users (full_name, age, gender, email, account_id, contact, address, password, ver_code, userType_id, regDate, updation_date, status)
+
+
+            $insert_data = "INSERT INTO `users` (full_name, age, gender, email, account_id, contact, address, password, ver_code, userType_id, regDate, updation_date, status)
+
                             values('$name', '$age', '$gender','$email', '$account_id', '$contact', '$address','$password','$code', '1', NOW(), NOW(), $status)";
             
             $data_check = mysqli_query($conn, $insert_data);
             if($data_check){
                 $subject = "Email Verification Code";
                 $message = "Your verification code is $code";
+
                 $sender = "From: shahiprem7890@gmail.com";
+
                 if(mail($email, $subject, $message, $sender)){
                     $info = "We've sent a verification code to your email - $email";
                     $_SESSION['info'] = $info;

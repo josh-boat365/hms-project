@@ -1,3 +1,14 @@
+<?php 
+include '../conn.php';
+include '../db_config.php';
+
+//seleting users from DB
+$select_users = mysqli_query($conn,"SELECT * FROM users");
+$select_user_type = mysqli_query($conn,"SELECT * FROM usertype");
+
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
     
@@ -260,14 +271,20 @@
 												</tr>
 											</thead>
 											<tbody>
-												<tr>
-													<td>Tiger Nixon</td>
-													<td>System Architect</td>
-													<td>Edinburgh</td>
-													<td>61</td>
-													<td>2011/04/25</td>
-													<td>$320,800</td>
-													<td>05/08/2021</td>
+												
+												<?php
+													while($rows=mysqli_fetch_assoc($select_users))
+													{
+												?>
+													<tr>
+													<td><?php echo $rows['full_name'];?></td>
+													<td><?php echo $rows['userType_id'] ?></td>
+													<td><?php echo $rows['email'];?></td>
+													<td><?php echo $rows['age'];?></td>
+													<td><?php echo $rows['account_id'];?></td>
+													<td><?php echo $rows['status'];?></td>
+													<td><?php echo $rows['regDate'];?></td>
+													
 													<td>
 														<div class="actions">
 															<a class="btn btn-sm bg-success-light" data-toggle="modal" href="#edit_specialities_details">
@@ -278,7 +295,11 @@
 															</a>
 														</div>
 													</td>
-												</tr>
+												</tr> 
+													<?php
+													}
+													?>
+												
 												
 											</tbody>
 										</table>
@@ -328,5 +349,4 @@
 		
     </body>
 
-<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/blank-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:53 GMT -->
 </html>
