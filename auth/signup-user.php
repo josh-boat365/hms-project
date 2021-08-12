@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <?php
+        include_once "header.php";
+    ?>
+    
     <div class="container">
         <div class="row">
             <div class="col-md-4 offset-md-4 form">
@@ -55,11 +60,13 @@
                     <div class="form-group">
                         <input class="form-control" type="email" name="email" placeholder="Email Address" required value="">
                     </div>
-                    <div class="form-group">
+                    <div class="d-flex">
+                    <div class="form-group col-12 col-sm-6 px-0 py-0">
                         <input class="form-control" type="text" name="contact" placeholder="Contact" required value="">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-12 col-sm-6 px-0 py-0">
                         <input class="form-control" type="text" name="address" placeholder="Address" required value="">
+                    </div>
                     </div>
                     <div class="password d-flex">
                     <div class="form-group col-12 col-sm-6 px-0 py-0">

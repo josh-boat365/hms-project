@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 04, 2021 at 01:11 PM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 7.3.28
+-- Generation Time: Aug 12, 2021 at 08:09 PM
+-- Server version: 10.4.20-MariaDB
+-- PHP Version: 8.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -168,19 +168,22 @@ CREATE TABLE `users` (
   `email` text NOT NULL,
   `account_id` varchar(18) NOT NULL,
   `password` varchar(225) NOT NULL,
+  `code` int(25) NOT NULL,
   `contact` text NOT NULL,
   `address` text DEFAULT NULL,
   `userType_id` int(3) DEFAULT NULL,
   `regDate` datetime NOT NULL DEFAULT current_timestamp(),
-  `updation_date` datetime DEFAULT current_timestamp()
+  `updation_date` datetime DEFAULT current_timestamp(),
+  `status` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `full_name`, `age`, `gender`, `email`, `account_id`, `password`, `contact`, `address`, `userType_id`, `regDate`, `updation_date`) VALUES
-(1, 'Joshua Nyarko Boateng', 21, 'Male', 'joshua.boat19@gmail.com', 'PA135968422', 'patient@Test14', '0550746180', 'Amasaman - Accra', 1, '2021-08-02 18:39:04', NULL);
+INSERT INTO `users` (`id`, `full_name`, `age`, `gender`, `email`, `account_id`, `password`, `code`, `contact`, `address`, `userType_id`, `regDate`, `updation_date`, `status`) VALUES
+(1, 'Joshua Nyarko Boateng', 21, 'Male', 'joshua.boat19@gmail.com', 'PA135968422', 'patient@Test14', 0, '0550746180', 'Amasaman - Accra', 1, '2021-08-02 18:39:04', NULL, ''),
+(4, 'Emmanuel Larbi', 22, 'Male', 'ekwabena57@gmail.com', '536', '$2y$10$geXGP7p1Sc0mq5607Im4ReSpDbLBNWR1nZ1ah8Lp9bv3GuqweYVdy', 0, '222', 'Gk-0678-0863', 1, '2021-08-12 17:14:01', '2021-08-12 17:14:01', 'verified');
 
 -- --------------------------------------------------------
 
@@ -326,7 +329,7 @@ ALTER TABLE `receptionist`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `usertype`
