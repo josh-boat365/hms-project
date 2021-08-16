@@ -38,10 +38,13 @@ $errors = array();
             //                 values('$name', '$email', '$encpass', '$code', '$status')";
 
 
-            $insert_data = "INSERT INTO `users` (full_name, age, gender, email, account_id, contact, address, password, ver_code, userType_id, regDate, updation_date, status)
+            // $insert_data = "INSERT INTO users (full_name, age, gender, email, account_id, contact, address, password, code, userType_id, regDate, updation_date, status)
 
-                            values('$name', '$age', '$gender','$email', '$account_id', '$contact', '$address','$password','$code', '1', NOW(), NOW(), $status)";
+            //                 values('$name', '$age', '$gender','$email', '$account_id', '$contact', '$address','$password','$code', '1', NOW(), NOW(), $status)";
             
+            $insert_data = "INSERT INTO users (`full_name`, `age`, `gender`, `email`, `account_id`, `password`, `code`, `contact`, `address`, `userType_id`, `regDate`, `updation_date`, `status`) 
+            VALUES ('$name', '$age', '$gender', '$email', '$account_id', '$encpass', '$code', '$contact', '$address', '1', NOW(), NOW(), '$status')";
+
             $data_check = mysqli_query($conn, $insert_data);
             if($data_check){
                 $subject = "Email Verification Code";

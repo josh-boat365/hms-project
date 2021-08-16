@@ -3,7 +3,7 @@
 $email = $_SESSION['email'];
 $password = $_SESSION['password'];
 if($email != false && $password != false){
-    $sql = "SELECT * FROM usertable WHERE email = '$email'";
+    $sql = "SELECT * FROM users WHERE email = '$email'";
     $run_Sql = mysqli_query($conn, $sql);
         if($run_Sql){
             $fetch_info = mysqli_fetch_assoc($run_Sql);
@@ -25,7 +25,7 @@ if($email != false && $password != false){
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title><?php echo $fetch_info['name'] ?> | Home</title>
+    <title><?php echo $fetch_info['full_name'] ?> | Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
@@ -68,7 +68,7 @@ if($email != false && $password != false){
     </nav>
     <div class="lobby">
     <h1>Welcome </h1>
-    <p><?php echo $fetch_info['name'] ?></p>
+    <p><?php echo $fetch_info['full_name'] ?></p>
     <p>To The Patients Lobby</p>
     </div>
     
