@@ -10,10 +10,11 @@ if (isset($_POST['submit'])){
     $appointment_time = $_POST['appointment_time'];
     $department = $_POST['department'];
     $message = $_POST['message'];
+    // $insert_sql($conn, "INSERT INTO `appointments` (`id`, `full_name`, `email`, `doctor_type`, `issue`, `date`, `time`) 
+    // VALUES ('$full_name', '$email', '$appointment_date', 'e', 'w', '2021-09-22', '03:37:51')");
+    $insert_sql = mysqli_query($conn, "INSERT INTO appointments (full_name, email, appointment_date, appointment_time, department, message) VALUES('$full_name','$email', '$appointment_time','$department', '$message')");
 
-    $insert_sql = mysqli_query($conn, "INSERT INTO online_appointments (full_name, email, appointment_date, appointment_time, department, message) VALUES('$full_name','$email','$appointment_date','$appointment_time','$department', '$message')");
-
-        if($insert_sql){
+        if(mysqli_num_rows($insert_sql) > 1){
             $_SESSION['booksuccs'] = "Appointment Booked Successfully!";
             //sending user mail for confirmation of  booked appointmemt
             $subject = "Book Appointment";

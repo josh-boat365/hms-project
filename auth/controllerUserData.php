@@ -52,6 +52,8 @@ $errors = array();
 
                 $sender = "From: add.office.stmoses@gmail.com";
 
+
+
                 if(mail($email, $subject, $message, $sender)){
                     $info = "We've sent a verification code to your email - $email";
                     $_SESSION['info'] = $info;
@@ -110,7 +112,7 @@ $errors = array();
                 if($status == 'verified'){
                   $_SESSION['email'] = $email;
                   $_SESSION['password'] = $password;
-                    header('location: home.php');
+                    header('location: ../pat-dashboard/patient-dash.php');
                 }else{
                     $info = "It's look like you haven't still verify your email - $email";
                     $_SESSION['info'] = $info;
