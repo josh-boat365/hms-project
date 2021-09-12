@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     
@@ -126,10 +129,10 @@
 												<span class="avatar avatar-sm">
 													<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/patients/patient3.jpg">
 												</span>
-												<div class="media-body">
-													<p class="noti-details"><span class="noti-title">Carl Kelly</span> send a message <span class="noti-title"> to his doctor</span></p>
-													<p class="noti-time"><span class="notification-time">12 mins ago</span></p>
-												</div>
+													<div class="media-body">
+														<p class="noti-details"><span class="noti-title">Carl Kelly</span> send a message <span class="noti-title"> to his doctor</span></p>
+														<p class="noti-time"><span class="notification-time">12 mins ago</span></p>
+													</div>
 											</div>
 										</a>
 									</li>
@@ -270,7 +273,7 @@
 												
 													<td class="text-right">
 														<div class="actions">
-															<a class="btn btn-sm bg-success-light" data-toggle="modal" href="#edit_specialities_details">
+															<a class="edit btn btn-sm bg-success-light" data-toggle="modal" href="#edit_specialities_details">
 																<i class="fe fe-pencil"></i> Edit
 															</a>
 															<a  data-toggle="modal" href="#delete_modal" class="btn btn-sm bg-danger-light">
