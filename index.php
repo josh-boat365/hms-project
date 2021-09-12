@@ -548,7 +548,7 @@ if (isset($_POST['submit'])){
                 <div class="col-md-12 col-sm-12 border-top">
                     <div class="col-md-4 col-sm-6">
                         <div class="copyright-text">
-                            <p>Copyright &copy; 2018 Your Company | Design: Tooplate</p>
+                            <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> sMMH | By Group 5</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6">

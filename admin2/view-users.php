@@ -1,10 +1,67 @@
 <?php 
+session_start();
 include '../conn.php';
 include '../db_config.php';
 
 //seleting users from DB
 $select_users = mysqli_query($conn,"SELECT * FROM users");
-$select_user_type = mysqli_query($conn,"SELECT * FROM usertype");
+
+	//updating user
+	if(isset($_POST['update-user'])){
+		$full_name=$_POST['full_name'];
+		$age=$_POST['age'];
+		$gender=$_POST['gender'];
+		$email=$_POST['email'];
+		$account_id=$_POST['account_id'];
+		$contact=$_POST['contact'];
+		$address=$_POST['address'];
+		$status = $_POST['status'];
+		$id = $_POST['id'];
+		$update_user = mysqli_query($conn, "UPDATE users SET full_name='$full_name', age='$age', gender='$gender', email='$email', account_id = '$account_id', 
+			contact='$contact', address='$address', status='$status'
+		 	WHERE id = '$id' ");
+			
+			 if($update_user){
+				$_SESSION['succsmsg'] = "User Details Updated Successfully";
+				mysqli_close($conn);
+				header("Refresh:0");
+
+			 }elseif(!$update_user){
+				$insert_user = mysqli_query($conn,"INSERT INTO  users (full_name,age,gender,email,account_id,contact,address,status) VALUES('$full_name','$age','$gender','$email','$account_id',$contact','$address','$status'");
+
+				$_SESSION['succsmsg'] = "User Details Updated Successfully";
+				mysqli_close($conn);
+				header("Refresh:0");
+
+				// $_SESSION['errmsg'] = "ERROR: " . $update_user . "<br>" . mysqli_error($conn);
+				 
+			 }else{
+		
+		$_SESSION['errmsg'] = "ERROR: Inserting or Updating new details into user's table ";
+		
+	}
+			 
+	}else{
+		
+		$_SESSION['errmsg'] = "ERROR: Inserting or Updating new details into user's table ";
+	}
+
+	//deleting user
+	if(isset($_POST['delete-user'])){
+		$delete_user = mysqli_query($conn, "DELETE FROM users WHERE id = $id");
+
+		if($delete_user){
+			$_SESSION['succsmsg'] = "User Details Details Successfully";
+			mysqli_close($conn);
+			header("Refresh:0");
+			exit();
+		}else{
+			$_SESSION['errmsg'] = "ERROR: Deleting User from Table";
+		}
+
+
+	}
+	
 
 
 
@@ -12,7 +69,7 @@ $select_user_type = mysqli_query($conn,"SELECT * FROM usertype");
 <!DOCTYPE html>
 <html lang="en">
     
-<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/blank-page.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:53 GMT -->
+
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
@@ -250,6 +307,63 @@ $select_user_type = mysqli_query($conn,"SELECT * FROM usertype");
 						</div>
 					</div>
 					<!-- /Page Header -->
+
+					<!-- User Type Legend -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="card">
+								<div class="card-body">
+									<div class="card-body">
+										<div class="table-responsive">
+											<table class=" datatable table-hover table-center mb-0">
+												<thead>
+													<tr>
+													<th>No.</th>
+													<th>User Type</th>
+													</tr>
+												</thead>
+												<tbody>
+														<td>1</td>
+														<td>Patient</td>
+													<tr>
+														<td>2</td>
+														<td>Doctor</td>
+													</tr>
+													<tr>
+														<td>3</td>
+														<td>Nurse</td>
+													</tr>
+													<tr>
+														<td>4</td>
+														<td>Receptionist</td>
+													</tr>
+													<tr>
+														<td>5</td>
+														<td>Accountant</td>
+													</tr>
+													<tr>
+														<td>6</td>
+														<td>Lab Technician</td>
+													</tr>
+													
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /User Type Legend -->
+
+					<span style=" color: red; padding: 1rem;">
+						<?php echo htmlentities($_SESSION['errmsg']); ?>
+						<?php echo htmlentities($_SESSION['errmsg'] = ""); ?>
+					</span>
+					<span style=" color: green; padding: 1rem;">
+						<?php echo htmlentities($_SESSION['succsmsg']); ?>
+						<?php echo htmlentities($_SESSION['succsmsg'] = ""); ?>
+					</span>
 					
 					<div class="row">
 						<div class="col-sm-12">
@@ -260,11 +374,15 @@ $select_user_type = mysqli_query($conn,"SELECT * FROM usertype");
 										<table class="datatable table table-stripped">
 											<thead>
 												<tr>
+													
 													<th>Name</th>
 													<th>User Type</th>
 													<th>E-mail</th>
+													<th>Contact</th>
 													<th>Age</th>
+													<th>Gender</th>
 													<th>Account ID</th>
+													<th>Address</th>
 													<th>Status</th>
 													<th>RegDate</th>
 													<th>Action</th>
@@ -275,22 +393,27 @@ $select_user_type = mysqli_query($conn,"SELECT * FROM usertype");
 												<?php
 													while($rows=mysqli_fetch_assoc($select_users))
 													{
+													
 												?>
 													<tr>
+													
 													<td><?php echo $rows['full_name'];?></td>
 													<td><?php echo $rows['userType_id'] ?></td>
 													<td><?php echo $rows['email'];?></td>
+													<td><?php echo $rows['contact'];?></td>
 													<td><?php echo $rows['age'];?></td>
+													<td><?php echo $rows['gender'];?></td>
 													<td><?php echo $rows['account_id'];?></td>
+													<td><?php echo $rows['address'];?></td>
 													<td><?php echo $rows['status'];?></td>
 													<td><?php echo $rows['regDate'];?></td>
 													
 													<td>
 														<div class="actions">
-															<a class="btn btn-sm bg-success-light" data-toggle="modal" href="#edit_specialities_details">
+															<a class="btn btn-sm bg-success-light editbtn" data-toggle="modal" href="<?php $rows['id'];?>">
 																<i class="fe fe-pencil"></i> Edit
 															</a>
-															<a  data-toggle="modal" href="#delete_modal" class="btn btn-sm bg-danger-light">
+															<a  data-toggle="modal" href="" class="btn btn-sm bg-danger-light deletebtn">
 																<i class="fe fe-trash"></i> Delete
 															</a>
 														</div>
@@ -299,9 +422,95 @@ $select_user_type = mysqli_query($conn,"SELECT * FROM usertype");
 													<?php
 													}
 													?>
+
+													<!-- Edit Details Modal -->
+											<div class="modal fade" id="edit_user_details" aria-hidden="true" role="dialog">
+												<div class="modal-dialog modal-dialog-centered" role="document" >
+													<div class="modal-content">
+														<div class="modal-header">
+															<h5 class="modal-title">User Details</h5>
+															<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																<span aria-hidden="true">&times;</span>
+															</button>
+														</div>
+														<div class="modal-body">
+															<form method="POST">
+																
+																<div class="row form-row">
+																	<div class="col-12">
+																		<div class="form-group">
+																			<label>Full Name</label>
+																			<div>
+																				<input type="text" name="full_name" id="full_name" class="form-control" value="">
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-12">
+																		<div class="form-group">
+																			<label>E-mail</label>
+																			<div>
+																				<input type="text" name="email" id="email" class="form-control" value="">
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-12 col-sm-6">
+																		<div class="form-group">
+																			<label>Age</label>
+																			<input type="text" name="age" id="age" class="form-control" value="">
+																		</div>
+																	</div>
+																	<div class="col-12 col-sm-6">
+																		<div class="form-group">
+																			<label>Gender</label>
+																			<input type="text" name="gender" id="gender"  class="form-control" value="">
+																		</div>
+																	</div>
+																	<div class="col-12 col-sm-6">
+																		<div class="form-group">
+																			<label>Account ID</label>
+																			<input type="text" name="account_id" id="account_id" class="form-control" value="">
+																		</div>
+																	</div>
+																	<div class="col-12 col-sm-6">
+																		<div class="form-group">
+																			<label>Contact</label>
+																			<input type="text" name="contact" id="contact" class="form-control" value="">
+																		</div>
+																	</div>
+																	<div class="col-12">
+																		<div class="form-group">
+																			<label>Address</label>
+																			<div>
+																				<input type="text" name="address" id="address" class="form-control" value="">
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-12 col-sm-6">
+																		<div class="form-group">
+																			<label>User Type</label>
+																			<input type="text" name="user_type" id="user_type" class="form-control" value="">
+																		</div>
+																	</div>
+																	<div class="col-12 col-sm-6">
+																		<div class="form-group">
+																			<label>Status</label>
+																			<input type="text"  id="status" name="status" class="form-control" value="">
+																		</div>
+																	</div>
+																	<!--  -->
+																	<input type="hidden" id="id"  name="id"  >
+																<button type="submit" name="update_user" class="btn btn-primary btn-block ">Save Changes</button>
+
+															</form>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- /Edit Details Modal -->
 												
 												
 											</tbody>
+											
 										</table>
 									</div>
 								</div>
@@ -313,6 +522,8 @@ $select_user_type = mysqli_query($conn,"SELECT * FROM usertype");
 				</div>			
 			</div>
 			<!-- /Page Wrapper -->
+
+		
 
 			<!-- Delete Modal -->
 			<div class="modal fade" id="delete_modal" aria-hidden="true" role="dialog">
@@ -346,6 +557,44 @@ $select_user_type = mysqli_query($conn,"SELECT * FROM usertype");
 		
 		<!-- Custom JS -->
 		<script  src="assets/js/script.js"></script>
+
+		<!-- retreive data from db to disaplay in modal -->
+		<Script>
+			$(document).ready(function(){
+				$('.editbtn').click(function(){
+					$('#edit_user_details').modal('show');
+
+					$tr = $(this).closest('tr');
+					var data = $tr.children("td").map(function(){
+						return $(this).text();
+					}).get();
+
+					console.log(data);
+					$('#full_name').val(data[0]);
+					$('#email').val(data[2]);
+					$('#age').val(data[4]);
+					$('#gender').val(data[5]);
+					$('#account_id').val(data[6]);
+					$('#address').val(data[7]);
+					$('#contact').val(data[3]);
+					$('#user_type').val(data[1]);
+					$('#status').val(data[8]);
+					$('#id').val(data[9]);
+				});
+			});
+
+
+			$(document).ready(function(){
+				$('.deletebtn').click(function(){
+					$('#delete_modal').modal('show');
+
+				
+
+				});
+			});
+
+
+		</Script>
 		
     </body>
 

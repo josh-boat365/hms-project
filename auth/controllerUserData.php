@@ -50,7 +50,9 @@ $errors = array();
                 $subject = "Email Verification Code";
                 $message = "Your verification code is $code";
 
-                $sender = "From: protech@gmail.com";
+                $sender = "From: add.office.stmoses@gmail.com";
+
+
 
                 if(mail($email, $subject, $message, $sender)){
                     $info = "We've sent a verification code to your email - $email";

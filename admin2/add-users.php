@@ -1,9 +1,8 @@
 <?php
 session_start();
-error_reporting(0);
 include "../conn.php";
 include "../db_config.php";
-include "../vendor/autoload.php";
+
 
 
 
@@ -61,6 +60,7 @@ if(isset($_POST['add-user'])){
 
 									if(mail($email,$subject,$message,$sender)){
 										$_SESSION['mail'] = "Account Details Set to Mail Successfully";
+										header("Refresh:0");
 										exit();
 									}else{
 										$_SESSION['errmail'] = "Mail not Sent!";
@@ -86,6 +86,7 @@ if(isset($_POST['add-user'])){
 
 									if(mail($email,$subject,$message,$sender)){
 										$_SESSION['mail'] = "Account Details Set to Mail Successfully";
+										header("Refresh:0");
 										exit();
 									}else{
 										$_SESSION['errmail'] = "Mail not Sent!";
@@ -109,6 +110,7 @@ if(isset($_POST['add-user'])){
 
 									if(mail($email,$subject,$message,$sender)){
 										$_SESSION['mail'] = "Account Details Set to Mail Successfully";
+										header("Refresh:0");
 										exit();
 									}else{
 										$_SESSION['errmail'] = "Mail not Sent!";
@@ -132,6 +134,7 @@ if(isset($_POST['add-user'])){
 
 									if(mail($email,$subject,$message,$sender)){
 										$_SESSION['mail'] = "Account Details Set to Mail Successfully";
+										header("Refresh:0");
 										exit();
 									}else{
 										$_SESSION['errmail'] = "Mail not Sent!";
@@ -155,6 +158,7 @@ if(isset($_POST['add-user'])){
 
 									if(mail($email,$subject,$message,$sender)){
 										$_SESSION['mail'] = "Account Details Set to Mail Successfully";
+										header("Refresh:0");
 										exit();
 									}else{
 										$_SESSION['errmail'] = "Mail not Sent!";
@@ -178,6 +182,7 @@ if(isset($_POST['add-user'])){
 
 									if(mail($email,$subject,$message,$sender)){
 										$_SESSION['mail'] = "Account Details Set to Mail Successfully";
+										header("Refresh:0");
 										exit();
 									}else{
 										$_SESSION['errmail'] = "Mail not Sent!";

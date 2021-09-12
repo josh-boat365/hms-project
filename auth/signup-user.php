@@ -86,7 +86,7 @@
                     <div class="form-group">
                         <input class="form-control button" type="submit" name="signup" value="Signup">
                     </div>
-                    <div class="link login-link text-center">Already a member? <a href="login-user.php">Login here</a></div>
+                    <div class="link login-link text-center">Already a member? <a href="patient-login.php">Login here</a></div>
                 </form>
             </div>
         </div>
