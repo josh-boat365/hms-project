@@ -2,7 +2,7 @@
 session_start();
 // require "connection.php";
 include_once "../conn.php";
-require "../app_crendentials.php";
+require "../credentials.php";
 $email = "";
 $name = "";
 $errors = array();

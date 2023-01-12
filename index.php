@@ -1,11 +1,11 @@
 <?php
 session_start();
-error_reporting(0);
 include 'conn.php';
+require './credentials.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 
-require '../vendor/autoload.php';
+require './vendor/autoload.php';
 // create a new object
 $mail = new PHPMailer();
 // configure an SMTP
@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
     $message = $_POST['message'];
     // $insert_sql($conn, "INSERT INTO `appointments` (`id`, `full_name`, `email`, `doctor_type`, `issue`, `date`, `time`) 
     // VALUES ('$full_name', '$email', '$appointment_date', 'e', 'w', '2021-09-22', '03:37:51')");
-    $insert_sql = mysqli_query($conn, "INSERT INTO appointments (full_name, email, appointment_date, appointment_time, department, message) VALUES('$full_name','$email', '$appointment_date','$appointment_time','$department', '$message')");
+    $insert_sql = mysqli_query($conn, "INSERT INTO online_appointments (full_name, email, appointment_date, appointment_time, department, message) VALUES('$full_name','$email', '$appointment_date','$appointment_time','$department', '$message')");
 
     if ($insert_sql) {
         $_SESSION['booksuccs'] = "Appointment Booked Successfully!";
@@ -40,10 +40,8 @@ if (isset($_POST['submit'])) {
 
         if ($mail->send()) {
             $_SESSION['mail'] = "Appointment Details Set to Mail Successfully";
-            header("./pat-dashboard/appointment-list.php");
-            exit();
         } else {
-            $_SESSION['errmail'] = "Mail not Sent!";
+            $_SESSION['errmail'] = "Mail not Sent!" . $mail->ErrorInfo;
         }
         mysqli_close($conn);
     } else {
@@ -402,7 +400,7 @@ if (isset($_POST['submit'])) {
 
                 <div class="col-md-6 col-sm-6">
                     <!-- CONTACT FORM HERE -->
-                    <form id="appointment-form" role="form" method="post">
+                    <form id="appointment-form" method="POST" action="#">
 
                         <!-- SECTION TITLE -->
                         <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
