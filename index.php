@@ -1,7 +1,21 @@
 <?php
 session_start();
-error_reporting(0);
 include 'conn.php';
+require './credentials.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+
+require './vendor/autoload.php';
+// create a new object
+$mail = new PHPMailer();
+// configure an SMTP
+$mail->isSMTP();
+$mail->Host = $mail_server;
+$mail->SMTPAuth = true;
+$mail->Username = $mail_username;
+$mail->Password = $mail_password;
+$mail->SMTPSecure = 'ssl';
+$mail->Port = 465;
 
 if (isset($_POST['submit'])) {
     $full_name = $_POST['full_name'];
@@ -12,22 +26,22 @@ if (isset($_POST['submit'])) {
     $message = $_POST['message'];
     // $insert_sql($conn, "INSERT INTO `appointments` (`id`, `full_name`, `email`, `doctor_type`, `issue`, `date`, `time`) 
     // VALUES ('$full_name', '$email', '$appointment_date', 'e', 'w', '2021-09-22', '03:37:51')");
-    $insert_sql = mysqli_query($conn, "INSERT INTO appointments (full_name, email, appointment_date, appointment_time, department, message) VALUES('$full_name','$email', '$appointment_date','$appointment_time','$department', '$message')");
+    $insert_sql = mysqli_query($conn, "INSERT INTO online_appointments (full_name, email, appointment_date, appointment_time, department, message) VALUES('$full_name','$email', '$appointment_date','$appointment_time','$department', '$message')");
 
     if ($insert_sql) {
         $_SESSION['booksuccs'] = "Appointment Booked Successfully!";
         //sending user mail for confirmation of  booked appointmemt
-        $subject = "Book Appointment";
-        $message = "Hi $full_name,\n Welcome to St. Moses Memorial Hospital. \nThank you for reaching out to us \n Your Appointment has been sent to the $department , department for a schedule. \n We will get back to you shortly. \n Appointment Details: \n Full Name: $full_name \n Email: $email \n Appointment Date: $appointment_date \n Appointment Time: $appointment_time \n Department: $department \n Message: $message.
+        $mail->setFrom('casvalabs@gmail.com', 'St. Moses Memorial Hospital');
+        $mail->addAddress($email);
+        $mail->Subject = "Book Appointment";
+        $mail->Body = "Hi $full_name,\n Welcome to St. Moses Memorial Hospital. \nThank you for reaching out to us \n Your Appointment has been sent to the $department , department for a schedule. \n We will get back to you shortly. \n Appointment Details: \n Full Name: $full_name \n Email: $email \n Appointment Date: $appointment_date \n Appointment Time: $appointment_time \n Department: $department \n Message: $message.
             ";
-        $sender = "From: casvalabs@gmail.com";
 
-        if (mail($email, $subject, $message, $sender)) {
+
+        if ($mail->send()) {
             $_SESSION['mail'] = "Appointment Details Set to Mail Successfully";
-            header("./pat-dashboard/appointment-list.php");
-            exit();
         } else {
-            $_SESSION['errmail'] = "Mail not Sent!";
+            $_SESSION['errmail'] = "Mail not Sent!" . $mail->ErrorInfo;
         }
         mysqli_close($conn);
     } else {
@@ -386,7 +400,7 @@ if (isset($_POST['submit'])) {
 
                 <div class="col-md-6 col-sm-6">
                     <!-- CONTACT FORM HERE -->
-                    <form id="appointment-form" role="form" method="post">
+                    <form id="appointment-form" method="POST" action="#">
 
                         <!-- SECTION TITLE -->
                         <div class="section-title wow fadeInUp" data-wow-delay="0.4s">

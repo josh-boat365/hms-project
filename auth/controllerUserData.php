@@ -2,7 +2,7 @@
 session_start();
 // require "connection.php";
 include_once "../conn.php";
-require "../app_crendentials.php";
+require "../credentials.php";
 $email = "";
 $name = "";
 $errors = array();
@@ -67,7 +67,7 @@ if (isset($_POST['signup'])) {
             $mail->setFrom('casvalabs@gmail.com', 'St. Moses Memorial Hospital');
             $mail->addAddress($email);
             $mail->Subject = 'Email verification Code';
-            $mail->Body = "<h1>Your verification code is $code</h1>";
+            $mail->Body = "Your verification code is $code";
 
 
             if ($mail->send()) {
