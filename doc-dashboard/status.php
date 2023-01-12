@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from dreamguys.co.in/demo/doccure/admin/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 30 Nov 2019 04:12:20 GMT -->
+
 
 <head>
     <meta charset="utf-8">
@@ -175,26 +175,26 @@
         <div class="sidebar" id="sidebar">
             <div class="sidebar-inner slimscroll">
                 <div id="sidebar-menu" class="sidebar-menu">
-                <ul>
+                    <ul>
                         <li class="menu-title">
                             <span>Doctor's Dashboard</span>
                         </li>
-                        <li >
+                        <li>
                             <a href="./doctors-dash.php"><i class="fe fe-home"></i> <span>Dashboard</span></a>
                         </li>
-                       
+
                         <li>
                             <a href="appointment-list.php"><i class="fe fe-layout"></i> <span>Appointments</span></a>
                         </li>
-                        <li> 
-                                <a href="calendar.php"><i class="fe fe-calendar"></i> <span>Calendar</span></a>
+                        <li>
+                            <a href="calendar.php"><i class="fe fe-calendar"></i> <span>Calendar</span></a>
                         </li>
-                        <li class="active"> 
-								<a href="status.php"><i class="fe fe-activity"></i> <span>Statistics</span></a>
-						</li>
-                        <li> 
-								<a href="profile.php"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
-						</li>
+                        <li class="active">
+                            <a href="status.php"><i class="fe fe-activity"></i> <span>Statistics</span></a>
+                        </li>
+                        <li>
+                            <a href="profile.php"><i class="fe fe-user-plus"></i> <span>Profile</span></a>
+                        </li>
 
                     </ul>
                 </div>
@@ -249,85 +249,85 @@
 
                     </div>
                 </div>
-               
-               
-                
-                    
-                    <div class="d-flex ">
-                        <!-- Recent Orders -->
-                        <div class="col-xl-3 col-sm-6 col-12">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <div class="dash-widget-header">
-                                                <span class="dash-widget-icon text-success border-success">
-                                                    <i class="fe fe-money"></i>
-                                                </span>
-                                                <div class="dash-count">
-                                                    <h3>485</h3>
-                                                </div>
-                                            </div>
-                                            <div class="dash-widget-info">
-                                                <h6 class="text-muted">Appointment</h6>
-                                                <div class="progress progress-sm">
-                                                    <div class="progress-bar bg-success w-50"></div>
-                                                </div>
-                                            </div>
-                                        </div>
+
+
+
+
+                <div class="d-flex ">
+                    <!-- Recent Orders -->
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dash-widget-header">
+                                    <span class="dash-widget-icon text-success border-success">
+                                        <i class="fe fe-money"></i>
+                                    </span>
+                                    <div class="dash-count">
+                                        <h3>485</h3>
                                     </div>
-						        </div>
-						
-                        <div class="col-xl-3 col-sm-6 col-12">
-							<div class="card">
-								<div class="card-body">
-									<div class="dash-widget-header">
-										<span class="dash-widget-icon text-warning border-warning">
-											<i class="fe fe-folder"></i>
-										</span>
-										<div class="dash-count">
-											<h3>$62523</h3>
-										</div>
-									</div>
-									<div class="dash-widget-info">
-										
-										<h6 class="text-muted">Revenue</h6>
-										<div class="progress progress-sm">
-											<div class="progress-bar bg-warning w-50"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-                        <div class="col-xl-3 col-sm-6 col-12" >
-                            <div class="card">
-                                <div class="card-body ">
-                                    <div class="dash-widget-header " >
-                                        <span class="dash-widget-icon text-danger">
-                                            <i class="fe fe-money"></i>
-                                        </span>
-                                        <div class="dash-count">
-                                            <h3> $1000</h3>
-                                        </div>
-                                    </div>
-                                    <div class="dash-widget-info">
-                                        <h6 class="text-muted">Income</h6>
-                                        <div class="progress progress-sm">
-                                            <div class="progress-bar bg-danger w-50"></div>
-                                        </div>
+                                </div>
+                                <div class="dash-widget-info">
+                                    <h6 class="text-muted">Appointment</h6>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar bg-success w-50"></div>
                                     </div>
                                 </div>
                             </div>
-                                                                
                         </div>
-                                
-                                
-                           
-                     
-                        <!-- /Recent Orders -->
                     </div>
 
-                    
-                   
-                
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="dash-widget-header">
+                                    <span class="dash-widget-icon text-warning border-warning">
+                                        <i class="fe fe-folder"></i>
+                                    </span>
+                                    <div class="dash-count">
+                                        <h3>$62523</h3>
+                                    </div>
+                                </div>
+                                <div class="dash-widget-info">
+
+                                    <h6 class="text-muted">Revenue</h6>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar bg-warning w-50"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12">
+                        <div class="card">
+                            <div class="card-body ">
+                                <div class="dash-widget-header ">
+                                    <span class="dash-widget-icon text-danger">
+                                        <i class="fe fe-money"></i>
+                                    </span>
+                                    <div class="dash-count">
+                                        <h3> $1000</h3>
+                                    </div>
+                                </div>
+                                <div class="dash-widget-info">
+                                    <h6 class="text-muted">Income</h6>
+                                    <div class="progress progress-sm">
+                                        <div class="progress-bar bg-danger w-50"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <!-- /Recent Orders -->
+                </div>
+
+
+
+
             </div>
         </div>
         <!-- /Page Wrapper -->
