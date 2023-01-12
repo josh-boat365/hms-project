@@ -2,6 +2,7 @@
 session_start();
 // require "connection.php";
 include_once "../conn.php";
+require "../app_crendentials.php";
 $email = "";
 $name = "";
 $errors = array();
@@ -13,10 +14,10 @@ require '../vendor/autoload.php';
 $mail = new PHPMailer();
 // configure an SMTP
 $mail->isSMTP();
-$mail->Host = 'smtp.gmail.com';
+$mail->Host = $mail_server;
 $mail->SMTPAuth = true;
-$mail->Username = 'casvalabs@gmail.com';
-$mail->Password = 'prqankdwcksfofmz';
+$mail->Username = $mail_username;
+$mail->Password = $mail_password;
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 
