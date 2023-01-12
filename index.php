@@ -3,7 +3,7 @@ session_start();
 error_reporting(0);
 include 'conn.php';
 
-if (isset($_POST['submit'])){
+if (isset($_POST['submit'])) {
     $full_name = $_POST['full_name'];
     $email = $_POST['email'];
     $appointment_date = $_POST['appointment_date'];
@@ -14,29 +14,26 @@ if (isset($_POST['submit'])){
     // VALUES ('$full_name', '$email', '$appointment_date', 'e', 'w', '2021-09-22', '03:37:51')");
     $insert_sql = mysqli_query($conn, "INSERT INTO appointments (full_name, email, appointment_date, appointment_time, department, message) VALUES('$full_name','$email', '$appointment_date','$appointment_time','$department', '$message')");
 
-        if($insert_sql){
-            $_SESSION['booksuccs'] = "Appointment Booked Successfully!";
-            //sending user mail for confirmation of  booked appointmemt
-            $subject = "Book Appointment";
-            $message = "Hi $full_name,\n Welcome to St. Moses Memorial Hospital. \nThank you for reaching out to us \n Your Appointment has been sent to the $department , department for a schedule. \n We will get back to you shortly. \n Appointment Details: \n Full Name: $full_name \n Email: $email \n Appointment Date: $appointment_date \n Appointment Time: $appointment_time \n Department: $department \n Message: $message.
+    if ($insert_sql) {
+        $_SESSION['booksuccs'] = "Appointment Booked Successfully!";
+        //sending user mail for confirmation of  booked appointmemt
+        $subject = "Book Appointment";
+        $message = "Hi $full_name,\n Welcome to St. Moses Memorial Hospital. \nThank you for reaching out to us \n Your Appointment has been sent to the $department , department for a schedule. \n We will get back to you shortly. \n Appointment Details: \n Full Name: $full_name \n Email: $email \n Appointment Date: $appointment_date \n Appointment Time: $appointment_time \n Department: $department \n Message: $message.
             ";
-            $sender= "From: add.office.stmoses@gmail.com";
+        $sender = "From: casvalabs@gmail.com";
 
-            if(mail($email,$subject,$message,$sender)){
-                $_SESSION['mail'] = "Appointment Details Set to Mail Successfully";
-                header("./pat-dashboard/appointment-list.php");
-                exit();
-            }else{
-                $_SESSION['errmail'] = "Mail not Sent!";
-            }
-            mysqli_close($conn);
-
-            }else{
-                $_SESSION['errmsg'] = "ERROR: ". $add_user ."".mysqli_error($conn);
-                mysqli_close($conn);
-            }
-            
-
+        if (mail($email, $subject, $message, $sender)) {
+            $_SESSION['mail'] = "Appointment Details Set to Mail Successfully";
+            header("./pat-dashboard/appointment-list.php");
+            exit();
+        } else {
+            $_SESSION['errmail'] = "Mail not Sent!";
+        }
+        mysqli_close($conn);
+    } else {
+        $_SESSION['errmsg'] = "ERROR: " . $add_user . "" . mysqli_error($conn);
+        mysqli_close($conn);
+    }
 }
 
 
@@ -96,7 +93,7 @@ if (isset($_POST['submit'])){
                 <div class="col-md-8 col-sm-7 text-align-right">
                     <span class="phone-icon"><i class="fa fa-phone"></i> 03033456843</span>
                     <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 6:00 AM - 10:00 PM (Mon-Fri)</span>
-                    <span class="email-icon"><i class="fa fa-envelope-o"></i> <a href="#">add.office.stmoses@gmail.com</a></span>
+                    <span class="email-icon"><i class="fa fa-envelope-o"></i> <a href="#">casvalabs@gmail.com</a></span>
                 </div>
 
             </div>
@@ -110,10 +107,10 @@ if (isset($_POST['submit'])){
 
             <div class="navbar-header">
                 <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                    </button>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
 
                 <!-- lOGO TEXT HERE -->
                 <a href="index.php" class="navbar-brand">St. Moses Memorial Hospital</a>
@@ -185,7 +182,7 @@ if (isset($_POST['submit'])){
 
                 <div class="col-md-6 col-sm-6">
                     <div class="about-info">
-                        <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to  St. Moses Memorial Hospital</h2>
+                        <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to St. Moses Memorial Hospital</h2>
                         <div class="wow fadeInUp" data-wow-delay="0.8s">
                             <p>Aenean luctus lobortis tellus, vel ornare enim molestie condimentum. Curabitur lacinia nisi vitae velit volutpat venenatis.</p>
                             <p>Sed a dignissim lacus. Quisque fermentum est non orci commodo, a luctus urna mattis. Ut placerat, diam a tempus vehicula.</p>
@@ -389,7 +386,7 @@ if (isset($_POST['submit'])){
 
                 <div class="col-md-6 col-sm-6">
                     <!-- CONTACT FORM HERE -->
-                    <form id="appointment-form" role="form" method="post" action="#">
+                    <form id="appointment-form" role="form" method="post">
 
                         <!-- SECTION TITLE -->
                         <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
@@ -397,23 +394,23 @@ if (isset($_POST['submit'])){
                         </div>
 
                         <span style="color: green; padding: 0.5rem;">
-                            <?php echo htmlentities($_SESSION['booksuccs']);?>
-                            <?php echo htmlentities($_SESSION['booksuccs'] = "");?>
+                            <?php echo htmlentities($_SESSION['booksuccs']); ?>
+                            <?php echo htmlentities($_SESSION['booksuccs'] = ""); ?>
                         </span>
 
                         <span style="color: red; padding: 0.5rem;">
-                            <?php echo htmlentities($_SESSION['errmsg']);?>
-                            <?php echo htmlentities($_SESSION['errmsg'] = "");?>
+                            <?php echo htmlentities($_SESSION['errmsg']); ?>
+                            <?php echo htmlentities($_SESSION['errmsg'] = ""); ?>
                         </span>
 
                         <span style="color: green; padding: 0.5rem;">
-                            <?php echo htmlentities($_SESSION['mail']);?>
-                            <?php echo htmlentities($_SESSION['mail'] = "");?>
+                            <?php echo htmlentities($_SESSION['mail']); ?>
+                            <?php echo htmlentities($_SESSION['mail'] = ""); ?>
                         </span>
 
                         <span style="color: red; padding: 0.5rem;">
-                            <?php echo htmlentities($_SESSION['errmail']);?>
-                            <?php echo htmlentities($_SESSION['errmail'] = "");?>
+                            <?php echo htmlentities($_SESSION['errmail']); ?>
+                            <?php echo htmlentities($_SESSION['errmail'] = ""); ?>
                         </span>
 
                         <div class="wow fadeInUp" data-wow-delay="0.8s">
@@ -440,11 +437,11 @@ if (isset($_POST['submit'])){
                             <div class="col-md-12 col-sm-12">
                                 <label for="select">Select Department</label>
                                 <select class="form-control" name="department">
-                                             <option value="General Health">General Health</option>
-                                             <option value="Cardiology">Cardiology</option>
-                                             <option value="Dental">Dental</option>
-                                             <option value="Marternity">Marternity</option>
-                                        </select>
+                                    <option value="General Health">General Health</option>
+                                    <option value="Cardiology">Cardiology</option>
+                                    <option value="Dental">Dental</option>
+                                    <option value="Marternity">Marternity</option>
+                                </select>
                             </div>
 
                             <div class="col-md-12 col-sm-12">
@@ -488,7 +485,7 @@ if (isset($_POST['submit'])){
 
                         <div class="contact-info">
                             <p><i class="fa fa-phone"></i> 030123034344</p>
-                            <p><i class="fa fa-envelope-o"></i> <a href="mailto:add.office.stmoses@gmail.com">add.office.stmoses@gmail.com</a></p>
+                            <p><i class="fa fa-envelope-o"></i> <a href="mailto:casvalabs@gmail.com">casvalabs@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -548,7 +545,9 @@ if (isset($_POST['submit'])){
                 <div class="col-md-12 col-sm-12 border-top">
                     <div class="col-md-4 col-sm-6">
                         <div class="copyright-text">
-                            <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> sMMH | By Group 5</p>
+                            <p>Copyright &copy; <script>
+                                    document.write(new Date().getFullYear())
+                                </script> sMMH | By Group 5</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6">

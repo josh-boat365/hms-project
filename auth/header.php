@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>St. Moses Memorial Hospital</title>
 
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="description" content="">
-<meta name="keywords" content="">
-<meta name="author" content="Group 5">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		
-		<link rel="stylesheet" href="../home/css/bootstrap.min.css">
+<head>
+    <title>St. Moses Memorial Hospital</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Group 5">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="../home/css/bootstrap.min.css">
     <link rel="stylesheet" href="../home/css/font-awesome.min.css">
     <link rel="stylesheet" href="../home/css/animate.css">
     <link rel="stylesheet" href="../home/css/owl.carousel.css">
@@ -27,14 +28,13 @@
             display: none;
 
         }
-
-
     </style>
 </head>
+
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
-    
-<!-- Header -->
-<!-- <header>
+
+    <!-- Header -->
+    <!-- <header>
         <div class="container">
             <div class="row">
 
@@ -45,7 +45,7 @@
                 <div class="col-md-8 col-sm-7 text-align-right">
                     <span class="phone-icon"><i class="fa fa-phone"></i> 03033456843</span>
                     <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 6:00 AM - 10:00 PM (Mon-Fri)</span>
-                    <span class="email-icon"><i class="fa fa-envelope-o"></i> <a href="#">add.office.stmoses@gmail.com</a></span>
+                    <span class="email-icon"><i class="fa fa-envelope-o"></i> <a href="#">casvalabs@gmail.com</a></span>
                 </div>
 
             </div>
@@ -58,10 +58,10 @@
 
             <div class="navbar-header">
                 <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                         <span class="icon icon-bar"></span>
-                    </button>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                    <span class="icon icon-bar"></span>
+                </button>
 
                 <!-- lOGO TEXT HERE -->
                 <a href="../index.php" class="navbar-brand">St. Moses Memorial Hospital</a>
@@ -83,5 +83,5 @@
         </div>
     </section>
 </body>
-</html>
 
+</html>

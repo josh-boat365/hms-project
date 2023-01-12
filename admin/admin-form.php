@@ -2,32 +2,31 @@
 session_start();
 error_reporting(0);
 include "../conn.php";
-if(isset($_POST['login'])){
+if (isset($_POST['login'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $check_user = mysqli_query($conn,"SELECT * FROM users WHERE email = '$email' and password = '$password' ");
+    $check_user = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email' and password = '$password' ");
     $arr = mysqli_fetch_array($check_user);
 
-    if($arr>0){
+    if ($arr > 0) {
         // echo "Login Success",mysqli_error($conn);
         $redirect = "projects/hms-project/admin2/";
         $_SESSION['login'] = $email;
         $_SESSION['id'] = $arr;
         $host = $_SERVER['HTTP_HOST'];
-        $uri = rtrim(dirname($_SERVER['PHP_SELFT']),'/\\');
+        $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
         header("location:http://$host$uri/$redirect");
         exit();
-    }else{
+    } else {
         // echo "not sucessful";
         $_SESSION['errmsg'] = "Wrong Username or Password!!";
-        $redirect = "projects/hms-project/admin/admin-form.php";
+        $redirect = "/hms-project/admin/admin-form.php";
         $host = $_SERVER['HTTP_HOST'];
-        $uri = rtrim(dirname($_SERVER['PHP_SELFT']),'/\\');
+        $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
         header("location:http://$host$uri/$redirect");
         exit();
     }
-
 }
 ?>
 
@@ -36,6 +35,7 @@ if(isset($_POST['login'])){
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,17 +43,18 @@ if(isset($_POST['login'])){
     <link rel="stylesheet" href="../admin/assets/sass/admin.css">
     <title>Admin|Login</title>
 </head>
+
 <body>
     <div class="admin-form">
         <section class="register-form">
-            <form action=""  method="POST">
+            <form action="" method="POST">
                 <header>Admin Register Form</header>
                 <hr>
                 <span style="color:red; padding: 1rem">
-                <?php echo htmlentities($_SESSION['errmsg']); ?>
-                <?php echo htmlentities($_SESSION['errmsg']="");?>
+                    <?php echo htmlentities($_SESSION['errmsg']); ?>
+                    <?php echo htmlentities($_SESSION['errmsg'] = ""); ?>
                 </span>
-                
+
                 <!-- <div class="name-field">
                     <div class="first-name">
                         <label for="">First Name</label>
@@ -68,7 +69,7 @@ if(isset($_POST['login'])){
 
                 <div class="email-field">
                     <label for="">Email Address</label>
-                    <input type="email"  id="" name="email" placeholder="johndoe@example.com" required>
+                    <input type="email" id="" name="email" placeholder="johndoe@example.com" required>
                 </div><br><br>
 
                 <div class="password-field">
@@ -84,4 +85,5 @@ if(isset($_POST['login'])){
         </section>
     </div>
 </body>
+
 </html>

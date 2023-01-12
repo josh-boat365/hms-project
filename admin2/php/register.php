@@ -57,7 +57,7 @@
             if($data_check){
                 $subject = "Email Verification Code";
                 $message = "Your verification code is $code";
-                $sender = "From: shahiprem7890@gmail.com";
+                $sender = "From: casvalabs@gmail.com";
                 if(mail($email, $subject, $message, $sender)){
                     $info = "We've sent a verification code to your email - $email";
                     $_SESSION['info'] = $info;
@@ -74,5 +74,3 @@
         }
 
     }
-
-?>
