@@ -3,6 +3,20 @@ session_start();
 error_reporting(0);
 include 'conn.php';
 
+use PHPMailer\PHPMailer\PHPMailer;
+
+require '../vendor/autoload.php';
+// create a new object
+$mail = new PHPMailer();
+// configure an SMTP
+$mail->isSMTP();
+$mail->Host = $mail_server;
+$mail->SMTPAuth = true;
+$mail->Username = $mail_username;
+$mail->Password = $mail_password;
+$mail->SMTPSecure = 'ssl';
+$mail->Port = 465;
+
 if (isset($_POST['submit'])) {
     $full_name = $_POST['full_name'];
     $email = $_POST['email'];
@@ -17,12 +31,14 @@ if (isset($_POST['submit'])) {
     if ($insert_sql) {
         $_SESSION['booksuccs'] = "Appointment Booked Successfully!";
         //sending user mail for confirmation of  booked appointmemt
-        $subject = "Book Appointment";
-        $message = "Hi $full_name,\n Welcome to St. Moses Memorial Hospital. \nThank you for reaching out to us \n Your Appointment has been sent to the $department , department for a schedule. \n We will get back to you shortly. \n Appointment Details: \n Full Name: $full_name \n Email: $email \n Appointment Date: $appointment_date \n Appointment Time: $appointment_time \n Department: $department \n Message: $message.
+        $mail->setFrom('casvalabs@gmail.com', 'St. Moses Memorial Hospital');
+        $mail->addAddress($email);
+        $mail->Subject = "Book Appointment";
+        $mail->Body = "Hi $full_name,\n Welcome to St. Moses Memorial Hospital. \nThank you for reaching out to us \n Your Appointment has been sent to the $department , department for a schedule. \n We will get back to you shortly. \n Appointment Details: \n Full Name: $full_name \n Email: $email \n Appointment Date: $appointment_date \n Appointment Time: $appointment_time \n Department: $department \n Message: $message.
             ";
-        $sender = "From: casvalabs@gmail.com";
 
-        if (mail($email, $subject, $message, $sender)) {
+
+        if ($mail->send()) {
             $_SESSION['mail'] = "Appointment Details Set to Mail Successfully";
             header("./pat-dashboard/appointment-list.php");
             exit();
