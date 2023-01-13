@@ -172,6 +172,7 @@ if (isset($_POST['staff-login'])) {
 
 <head>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../home/images/title-logo.png" type="image/x-icon">
     <title>Staff Login Form</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">

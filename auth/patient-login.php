@@ -1,34 +1,32 @@
 <?php
+include "controllerUserData.php";
 
-require_once "controllerUserData.php";
-include_once "../conn.php";
+// if (isset($_POST['login'])) {
+//     $email = $_POST['email'];
+//     $password = $_POST['password'];
 
-if (isset($_POST['login'])) {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+//     $validate_pateint = mysqli_query($conn, "SELECT * FORM users WHERE email = '$email' and password = '$password' ");
 
-    $validate_pateint = mysqli_query($conn, "SELECT * FORM admin WHERE email = '$email' and password = '$password' ");
-
-    $arr = mysqli_fetch_array($validate_patient);
-    if ($arr > 0) {
-        // echo "Login Success",mysqli_error($conn);
-        $redirect = "/pat-dashboard/patient-dash.php";
-        $_SESSION['login'] = $email;
-        $_SESSION['id'] = $arr;
-        $host = $_SERVER['HTTP_HOST'];
-        $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
-        header("location:http://$host$uri/$redirect");
-        exit();
-    } else {
-        // echo "not sucessful";
-        $_SESSION['errmsg'] = "Wrong Username or Password!!";
-        $redirect = "/index.php";
-        $host = $_SERVER['HTTP_HOST'];
-        $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
-        header("location:http://$host$uri/$redirect");
-        exit();
-    }
-}
+//     $arr = mysqli_fetch_array($validate_patient);
+//     if ($arr > 0) {
+//         // echo "Login Success",mysqli_error($conn);
+//         $redirect = "/pat-dashboard/patient-dash.php";
+//         $_SESSION['email'] = $email;
+//         $_SESSION['id'] = $arr;
+//         $host = $_SERVER['HTTP_HOST'];
+//         $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
+//         header("location:http://$host$uri/$redirect");
+//         exit();
+//     } else {
+//         // echo "not sucessful";
+//         $_SESSION['errmsg'] = "Wrong Username or Password!!";
+//         $redirect = "/index.php";
+//         $host = $_SERVER['HTTP_HOST'];
+//         $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
+//         header("location:http://$host$uri/$redirect");
+//         exit();
+//     }
+// }
 
 
 ?>

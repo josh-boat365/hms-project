@@ -66,10 +66,11 @@ if (isset($_POST['submit'])) {
     <title>St. Moses Memorial Hospital</title>
 
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="home/images/title-logo.png" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="author" content="Group 5">
+    <meta name="author" content="Group 1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- <meta http-equiv="refresh" content="0"> -->
 
@@ -106,7 +107,7 @@ if (isset($_POST['submit'])) {
                 </div>
 
                 <div class="col-md-8 col-sm-7 text-align-right">
-                    <span class="phone-icon"><i class="fa fa-phone"></i> 03033456843</span>
+                    <span class="phone-icon"><i class="fa fa-phone"></i> 0272312737</span>
                     <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 6:00 AM - 10:00 PM (Mon-Fri)</span>
                     <span class="email-icon"><i class="fa fa-envelope-o"></i> <a href="#">casvalabs@gmail.com</a></span>
                 </div>
@@ -396,7 +397,7 @@ if (isset($_POST['submit'])) {
             <div class="row">
 
                 <div class="col-md-6 col-sm-6">
-                    <img src="home/images/appointment-image.jpg" class="img-responsive" alt="">
+                    <img src="home/images/appt-image.jpg" class="img-responsive" alt="">
                 </div>
 
                 <div class="col-md-6 col-sm-6">
@@ -502,7 +503,7 @@ if (isset($_POST['submit'])) {
                         <p>Fusce at libero iaculis, venenatis augue quis, pharetra lorem. Curabitur ut dolor eu elit consequat ultricies.</p>
 
                         <div class="contact-info">
-                            <p><i class="fa fa-phone"></i> 030123034344</p>
+                            <p><i class="fa fa-phone"></i> 0272312737</p>
                             <p><i class="fa fa-envelope-o"></i> <a href="mailto:casvalabs@gmail.com">casvalabs@gmail.com</a></p>
                         </div>
                     </div>
@@ -565,7 +566,7 @@ if (isset($_POST['submit'])) {
                         <div class="copyright-text">
                             <p>Copyright &copy; <script>
                                     document.write(new Date().getFullYear())
-                                </script> sMMH | By Group 5</p>
+                                </script> sMMH | By Group 1</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6">

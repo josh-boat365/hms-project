@@ -5,10 +5,11 @@
     <title>St. Moses Memorial Hospital</title>
 
     <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../home/images/title-logo.png" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="description" content="">
     <meta name="keywords" content="">
-    <meta name="author" content="Group 5">
+    <meta name="author" content="Group 1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <link rel="stylesheet" href="../home/css/bootstrap.min.css">
@@ -43,7 +44,7 @@
                 </div>
 
                 <div class="col-md-8 col-sm-7 text-align-right">
-                    <span class="phone-icon"><i class="fa fa-phone"></i> 03033456843</span>
+                    <span class="phone-icon"><i class="fa fa-phone"></i> 0272312737</span>
                     <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 6:00 AM - 10:00 PM (Mon-Fri)</span>
                     <span class="email-icon"><i class="fa fa-envelope-o"></i> <a href="#">casvalabs@gmail.com</a></span>
                 </div>

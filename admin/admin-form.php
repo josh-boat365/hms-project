@@ -69,7 +69,7 @@ if (isset($_POST['login'])) {
 
                 <div class="email-field">
                     <label for="">Email Address</label>
-                    <input type="email" id="" name="email" placeholder="johndoe@example.com" required>
+                    <input type="email" id="" name="email" placeholder="<?php echo $email ?>" required>
                 </div><br><br>
 
                 <div class="password-field">
