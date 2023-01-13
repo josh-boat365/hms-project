@@ -12,7 +12,7 @@ if (isset($_POST['login'])) {
     $arr = mysqli_fetch_array($validate_patient);
     if ($arr > 0) {
         // echo "Login Success",mysqli_error($conn);
-        $redirect = "/hms-project/pat-dashboard/patient-dash.php";
+        $redirect = "/pat-dashboard/patient-dash.php";
         $_SESSION['login'] = $email;
         $_SESSION['id'] = $arr;
         $host = $_SERVER['HTTP_HOST'];
@@ -22,7 +22,7 @@ if (isset($_POST['login'])) {
     } else {
         // echo "not sucessful";
         $_SESSION['errmsg'] = "Wrong Username or Password!!";
-        $redirect = "/hms-project/index.php";
+        $redirect = "/index.php";
         $host = $_SERVER['HTTP_HOST'];
         $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
         header("location:http://$host$uri/$redirect");
