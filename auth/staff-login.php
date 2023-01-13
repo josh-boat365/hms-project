@@ -17,20 +17,18 @@ if (isset($_POST['staff-login'])) {
             $arr = mysqli_fetch_array($validate_admin);
             if ($arr > 0) {
                 //echo "Login Success",mysqli_error($conn);
-                $redirect = "/hms-project/admin2/index.php";
+                $redirect = "/admin2/index.php";
                 $_SESSION['login'] = $email;
                 $host = $_SERVER['HTTP_HOST'];
                 $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
                 header("location:http://$host$uri/$redirect");
-                exit();
             } else {
                 //echo "not sucessful";
                 $_SESSION['errmsg'] = "Wrong Username or Password!!";
-                $redirect = "/hms-project/auth/staff-login.php";
+                $redirect = "/auth/staff-login.php";
                 $host = $_SERVER['HTTP_HOST'];
                 $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
                 header("location:http://$host$uri/$redirect");
-                exit();
             }
             break;
         case '2':
@@ -39,21 +37,19 @@ if (isset($_POST['staff-login'])) {
             $arr = mysqli_fetch_array($validate_patient);
             if ($arr > 0) {
                 // echo "Login Success",mysqli_error($conn);
-                $redirect = "/hms-project/pat-dashboard/patient-dash.php";
+                $redirect = "/pat-dashboard/patient-dash.php";
                 $_SESSION['login'] = $email;
                 $_SESSION['id'] = $arr;
                 $host = $_SERVER['HTTP_HOST'];
                 $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
                 header("location:http://$host$uri/$redirect");
-                exit();
             } else {
                 // echo "not sucessful";
                 $_SESSION['errmsg'] = "Wrong Username or Password!!";
-                $redirect = "/hms-project/index.php";
+                $redirect = "/admin2/index.php";
                 $host = $_SERVER['HTTP_HOST'];
                 $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
                 header("location:http://$host$uri/$redirect");
-                exit();
             }
             break;
         case '3':
@@ -62,21 +58,19 @@ if (isset($_POST['staff-login'])) {
             $arr = mysqli_fetch_array($validate_doctor);
             if ($arr > 0) {
                 // echo "Login Success",mysqli_error($conn);
-                $redirect = "/hms-project/doc-dashboard/doctors-dash.php";
+                $redirect = "/doc-dashboard/doctors-dash.php";
                 $_SESSION['login'] = $email;
                 $_SESSION['id'] = $arr;
                 $host = $_SERVER['HTTP_HOST'];
                 $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
                 header("location:http://$host$uri/$redirect");
-                exit();
             } else {
                 // echo "not sucessful";
                 $_SESSION['errmsg'] = "Wrong Username or Password!!";
-                $redirect = "/hms-project/index.php";
+                $redirect = "/admin2/index.php";
                 $host = $_SERVER['HTTP_HOST'];
                 $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
                 header("location:http://$host$uri/$redirect");
-                exit();
             }
             break;
         case '4':
@@ -85,21 +79,19 @@ if (isset($_POST['staff-login'])) {
             $arr = mysqli_fetch_array($validate_nurse);
             if ($arr > 0) {
                 // echo "Login Success",mysqli_error($conn);
-                $redirect = "/hms-project/nurse-dashboard/nurse-dash.php";
+                $redirect = "/nurse-dashboard/nurse-dash.php";
                 $_SESSION['login'] = $email;
                 $_SESSION['id'] = $arr;
                 $host = $_SERVER['HTTP_HOST'];
                 $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
                 header("location:http://$host$uri/$redirect");
-                exit();
             } else {
                 // echo "not sucessful";
                 $_SESSION['errmsg'] = "Wrong Username or Password!!";
-                $redirect = "/hms-project/index.php";
+                $redirect = "/admin2/index.php";
                 $host = $_SERVER['HTTP_HOST'];
                 $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
                 header("location:http://$host$uri/$redirect");
-                exit();
             }
             break;
         case '5':
@@ -108,21 +100,19 @@ if (isset($_POST['staff-login'])) {
             $arr = mysqli_fetch_array($validate_admin);
             if ($arr > 0) {
                 // echo "Login Success",mysqli_error($conn);
-                $redirect = "/hms-project/admin2/index.php";
+                $redirect = "/admin2/index.php";
                 $_SESSION['login'] = $email;
                 $_SESSION['id'] = $arr;
                 $host = $_SERVER['HTTP_HOST'];
                 $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
                 header("location:http://$host$uri/$redirect");
-                exit();
             } else {
                 // echo "not sucessful";
                 $_SESSION['errmsg'] = "Wrong Username or Password!!";
-                $redirect = "/hms-project/index.php";
+                $redirect = "/admin2/index.php";
                 $host = $_SERVER['HTTP_HOST'];
                 $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
                 header("location:http://$host$uri/$redirect");
-                exit();
             }
             break;
         case '6':
@@ -131,21 +121,19 @@ if (isset($_POST['staff-login'])) {
             $arr = mysqli_fetch_array($validate_admin);
             if ($arr > 0) {
                 // echo "Login Success",mysqli_error($conn);
-                $redirect = "/hms-project/admin2/index.php";
+                $redirect = "/admin2/index.php";
                 $_SESSION['login'] = $email;
                 $_SESSION['id'] = $arr;
                 $host = $_SERVER['HTTP_HOST'];
                 $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
                 header("location:http://$host$uri/$redirect");
-                exit();
             } else {
                 // echo "not sucessful";
                 $_SESSION['errmsg'] = "Wrong Username or Password!!";
-                $redirect = "/hms-project/index.php";
+                $redirect = "/admin2/index.php";
                 $host = $_SERVER['HTTP_HOST'];
                 $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
                 header("location:http://$host$uri/$redirect");
-                exit();
             }
             break;
         case '7':
@@ -154,21 +142,19 @@ if (isset($_POST['staff-login'])) {
             $arr = mysqli_fetch_array($validate_admin);
             if ($arr > 0) {
                 // echo "Login Success",mysqli_error($conn);
-                $redirect = "/hms-project/admin2/index.php";
+                $redirect = "/admin2/index.php";
                 $_SESSION['login'] = $email;
                 $_SESSION['id'] = $arr;
                 $host = $_SERVER['HTTP_HOST'];
                 $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
                 header("location:http://$host$uri/$redirect");
-                exit();
             } else {
                 // echo "not sucessful";
                 $_SESSION['errmsg'] = "Wrong Username or Password!!";
-                $redirect = "/hms-project/index.php";
+                $redirect = "/admin2/index.php";
                 $host = $_SERVER['HTTP_HOST'];
                 $uri = rtrim(dirname($_SERVER['PHP_SELFT']), '/\\');
                 header("location:http://$host$uri/$redirect");
-                exit();
             }
             break;
         default:

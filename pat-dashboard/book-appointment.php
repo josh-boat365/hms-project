@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
 	<title>St. Moses Memorial Hospital| Add Users</title>
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="../home/images/title-logo.png">
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -92,7 +92,7 @@ if (isset($_POST['submit'])) {
 			<!-- Logo -->
 			<div class="header-left">
 				<a href="../index.php" class="logo">
-					<!-- <img src="assets/img/logo.png" alt="Logo"> -->
+					<!-- <h1>sMMH</h1> -->
 					<h1 class="custom">
 						<style>
 							.custom {

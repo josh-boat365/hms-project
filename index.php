@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(0);
 include 'conn.php';
 require './credentials.php';
 
@@ -473,7 +474,7 @@ if (isset($_POST['submit'])) {
         </div>
     </section>
 
-
+    <br>
     <!-- GOOGLE MAP -->
     <section id="google-map">
         <!-- How to change your own map point
@@ -482,9 +483,12 @@ if (isset($_POST['submit'])) {
             3. Click "Share" and choose "Embed map" tab
             4. Copy only URL and paste it within the src="" field below
 	-->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.0890546579617!2d-0.30426668546508395!3d5.700272995868396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9f267592aa47%3A0x7b6062516d9d126b!2sSt.%20Moses%20Community%20Hospital!5e0!3m2!1sen!2sgh!4v1628113735254!5m2!1sen!2sgh" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3970.4305853027154!2d-0.1930587727075818!3d5.65067889735698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf9c79f4004277%3A0x781bce0112f495b7!2sLegon%20Campus!5e0!3m2!1sen!2sgh!4v1673600979431!5m2!1sen!2sgh" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
     </section>
+
+
 
 
     <!-- FOOTER -->

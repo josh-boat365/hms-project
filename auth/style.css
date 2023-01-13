@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 html,body{
     /* background: #6665ee; */
-    background: url("../home/images/slider1.jpg");
+    background: url("../home/images/slider01.jpg");
     background-size: cover;
     font-family: 'Poppins', sans-serif;
 }

@@ -8,7 +8,7 @@
 	<title>Profile | St. Moses Memorial Hospital</title>
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="../home/images/title-logo.png">
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -39,7 +39,7 @@
 			<!-- Logo -->
 			<div class="header-left">
 				<a href="../index.php" class="logo">
-					<!-- <img src="assets/img/logo.png" alt="Logo"> -->
+					<!-- <h1>sMMH</h1> -->
 					<h1>sMMH</h1>
 				</a>
 				<a href="../index.php" class="logo logo-small">

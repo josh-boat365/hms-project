@@ -209,7 +209,7 @@ if (isset($_POST['add-user'])) {
 	<title>St. Moses Memorial Hospital| Add Users</title>
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+	<link rel="shortcut icon" type="image/x-icon" href="../home/images/title-logo.png">
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -236,7 +236,7 @@ if (isset($_POST['add-user'])) {
 			<!-- Logo -->
 			<div class="header-left">
 				<a href="index.php" class="logo">
-					<img src="assets/img/logo.png" alt="Logo">
+					<h1>sMMH</h1>
 				</a>
 				<a href="index.php" class="logo logo-small">
 					<img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
