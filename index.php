@@ -206,7 +206,7 @@ if (isset($_POST['submit'])) {
                         <figure class="profile wow fadeInUp" data-wow-delay="1s">
                             <img src="home/images/author-image.jpg" class="img-responsive" alt="">
                             <figcaption>
-                                <h3>Dr. Neil Jackson</h3>
+                                <h3>Dr. Charlotte Wellington</h3>
                                 <p>General Principal</p>
                             </figcaption>
                         </figure>
@@ -318,14 +318,14 @@ if (isset($_POST['submit'])) {
 
                 <div class="col-md-12 col-sm-12">
                     <!-- SECTION TITLE -->
-                    <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                    <!-- <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
                         <h2>Latest News</h2>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="col-md-4 col-sm-6">
                     <!-- NEWS THUMB -->
-                    <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                    <!-- <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
                         <a href="home/news-detail.html">
                             <img src="home/images/news-image1.jpg" class="img-responsive" alt="">
                         </a>
@@ -341,12 +341,12 @@ if (isset($_POST['submit'])) {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="col-md-4 col-sm-6">
                     <!-- NEWS THUMB -->
-                    <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+                    <!-- <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
                         <a href="home/news-detail.html">
                             <img src="home/images/news-image2.jpg" class="img-responsive" alt="">
                         </a>
@@ -362,12 +362,12 @@ if (isset($_POST['submit'])) {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="col-md-4 col-sm-6">
                     <!-- NEWS THUMB -->
-                    <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                    <!-- <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
                         <a href="home/news-detail.html">
                             <img src="home/images/news-image3.jpg" class="img-responsive" alt="">
                         </a>
@@ -383,7 +383,7 @@ if (isset($_POST['submit'])) {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
