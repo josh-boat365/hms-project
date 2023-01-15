@@ -116,7 +116,7 @@
 												<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/patients/patient2.jpg">
 											</span>
 											<div class="media-body">
-												<p class="noti-details"><span class="noti-title">Travis Trimble</span> sent a amount of $210 for his <span class="noti-title">appointment</span></p>
+												<p class="noti-details"><span class="noti-title">Travis Trimble</span> sent a amount of GHC210 for his <span class="noti-title">appointment</span></p>
 												<p class="noti-time"><span class="notification-time">8 mins ago</span></p>
 											</div>
 										</div>
@@ -256,7 +256,7 @@
 													</div>
 												</td>
 												<td class="text-right">
-													$200.00
+													GHC200.00
 												</td>
 											</tr>
 											<tr>
@@ -282,85 +282,10 @@
 													</div>
 												</td>
 												<td class="text-right">
-													$300.00
+													GHC300.00
 												</td>
 											</tr>
-											<tr>
-												<td>
-													<h2 class="table-avatar">
-														<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-03.jpg" alt="User Image"></a>
-														<a href="profile.php">Dr. Deborah Angel</a>
-													</h2>
-												</td>
-												<td>Cardiology</td>
-												<td>
-													<h2 class="table-avatar">
-														<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient3.jpg" alt="User Image"></a>
-														<a href="profile.php">Carl Kelly</a>
-													</h2>
-												</td>
-												<td>11 Nov 2019 <span class="text-primary d-block">12.00 PM - 12.15 PM</span></td>
-												<td>
-													<div class="status-toggle">
-														<input type="checkbox" id="status_3" class="check" checked>
-														<label for="status_3" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td class="text-right">
-													$150.00
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h2 class="table-avatar">
-														<a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-04.jpg" alt="User Image"></a>
-														<a href="profile.php">Dr. Sofia Brient</a>
-													</h2>
-												</td>
-												<td>Urology</td>
-												<td>
-													<h2 class="table-avatar">
-														<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient4.jpg" alt="User Image"></a>
-														<a href="profile.php"> Michelle Fairfax</a>
-													</h2>
-												</td>
-												<td>7 Nov 2019 <span class="text-primary d-block">1.00 PM - 1.20 PM</span></td>
-												<td>
-													<div class="status-toggle">
-														<input type="checkbox" id="status_4" class="check" checked>
-														<label for="status_4" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td class="text-right">
-													$150.00
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h2 class="table-avatar">
-														<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-05.jpg" alt="User Image"></a>
-														<a href="profile.php">Dr. Marvin Campbell</a>
-													</h2>
-												</td>
-												<td>Orthopaedics</td>
-												<td>
-													<h2 class="table-avatar">
-														<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient5.jpg" alt="User Image"></a>
-														<a href="profile.php">Gina Moore</a>
-													</h2>
-												</td>
 
-												<td>15 Nov 2019 <span class="text-primary d-block">1.00 PM - 1.15 PM</span></td>
-												<td>
-													<div class="status-toggle">
-														<input type="checkbox" id="status_5" class="check" checked>
-														<label for="status_5" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td class="text-right">
-													$200.00
-												</td>
-											</tr>
 											<tr>
 												<td>
 													<h2 class="table-avatar">
@@ -384,7 +309,7 @@
 													</div>
 												</td>
 												<td class="text-right">
-													$250.00
+													GHC250.00
 												</td>
 											</tr>
 											<tr>
@@ -410,87 +335,12 @@
 													</div>
 												</td>
 												<td class="text-right">
-													$260.00
+													GHC260.00
 												</td>
 											</tr>
-											<tr>
-												<td>
-													<h2 class="table-avatar">
-														<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-08.jpg" alt="User Image"></a>
-														<a href="profile.php">Dr. Paul Richard</a>
-													</h2>
-												</td>
-												<td>Dermatology</td>
-												<td>
-													<h2 class="table-avatar">
-														<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient8.jpg" alt="User Image"></a>
-														<a href="profile.php"> Daniel Griffing</a>
-													</h2>
-												</td>
 
-												<td>18 Nov 2019 <span class="text-primary d-block">11.10 AM - 11.25 AM</span></td>
-												<td>
-													<div class="status-toggle">
-														<input type="checkbox" id="status_5" class="check" checked>
-														<label for="status_5" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td class="text-right">
-													$260.00
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h2 class="table-avatar">
-														<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-09.jpg" alt="User Image"></a>
-														<a href="profile.php">Dr. John Gibbs</a>
-													</h2>
-												</td>
-												<td>Dental</td>
-												<td>
-													<h2 class="table-avatar">
-														<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient9.jpg" alt="User Image"></a>
-														<a href="profile.php">Walter Roberson</a>
-													</h2>
-												</td>
 
-												<td>21 Nov 2019 <span class="text-primary d-block">12.10 PM - 12.25 PM</span></td>
-												<td>
-													<div class="status-toggle">
-														<input type="checkbox" id="status_5" class="check" checked>
-														<label for="status_5" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td class="text-right">
-													$300.00
-												</td>
-											</tr>
-											<tr>
-												<td>
-													<h2 class="table-avatar">
-														<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-10.jpg" alt="User Image"></a>
-														<a href="profile.php">Dr. Olga Barlow</a>
-													</h2>
-												</td>
-												<td>Dental</td>
-												<td>
-													<h2 class="table-avatar">
-														<a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient10.jpg" alt="User Image"></a>
-														<a href="profile.php">Robert Rhodes</a>
-													</h2>
-												</td>
 
-												<td>23 Nov 2019 <span class="text-primary d-block">12.10 PM - 12.25 PM</span></td>
-												<td>
-													<div class="status-toggle">
-														<input type="checkbox" id="status_5" class="check" checked>
-														<label for="status_5" class="checktoggle">checkbox</label>
-													</div>
-												</td>
-												<td class="text-right">
-													$300.00
-												</td>
-											</tr>
 										</tbody>
 									</table>
 								</div>

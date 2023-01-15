@@ -47,22 +47,11 @@
                     <!-- <h1>sMMH</h1> -->
                     <h1>sMMH</h1>
                 </a>
-                <a href="../index.php" class="logo logo-small">
-                    <img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
-                </a>
+
             </div>
             <!-- /Logo -->
 
-            <a href="javascript:void(0);" id="toggle_btn">
-                <i class="fe fe-text-align-left"></i>
-            </a>
 
-            <div class="top-nav-search">
-                <form>
-                    <input type="text" class="form-control" placeholder="Search here">
-                    <button class="btn" type="submit"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
 
             <!-- Mobile Menu Toggle -->
             <a class="mobile_btn" id="mobile_btn">
@@ -75,14 +64,14 @@
 
                 <!-- Notifications -->
                 <li class="nav-item dropdown noti-dropdown">
-                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                    <!-- <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                         <i class="fe fe-bell"></i> <span class="badge badge-pill">3</span>
-                    </a>
+                    </a> -->
                     <div class="dropdown-menu notifications">
-                        <div class="topnav-dropdown-header">
+                        <!-- <div class="topnav-dropdown-header">
                             <span class="notification-title">Notifications</span>
                             <a href="javascript:void(0)" class="clear-noti"> Clear All </a>
-                        </div>
+                        </div> -->
                         <div class="noti-content">
                             <ul class="notification-list">
                                 <li class="notification-message">
@@ -118,7 +107,7 @@
                                                 <img class="avatar-img rounded-circle" alt="User Image" src="assets/img/patients/patient2.jpg">
                                             </span>
                                             <div class="media-body">
-                                                <p class="noti-details"><span class="noti-title">Travis Trimble</span> sent a amount of $210 for his <span class="noti-title">appointment</span></p>
+                                                <p class="noti-details"><span class="noti-title">Travis Trimble</span> sent a amount of GHC210 for his <span class="noti-title">appointment</span></p>
                                                 <p class="noti-time"><span class="notification-time">8 mins ago</span></p>
                                             </div>
                                         </div>
@@ -229,7 +218,7 @@
                                         <i class="fe fe-money"></i>
                                     </span>
                                     <div class="dash-count">
-                                        <h3>485</h3>
+                                        <h3>00</h3>
                                     </div>
                                 </div>
                                 <div class="dash-widget-info">
@@ -244,37 +233,7 @@
                     </div>
 
                 </div>
-                <div class="row">
-                    <div style="display: none;">
 
-                        <!-- Sales Chart -->
-                        <div class="card card-chart">
-                            <div class="card-header">
-                                <h4 class="card-title">Revenue</h4>
-                            </div>
-                            <div class="card-body">
-                                <div id="morrisArea"></div>
-                            </div>
-                        </div>
-                        <!-- /Sales Chart -->
-
-                    </div>
-
-                    <div class="col-md-12 col-lg-6">
-
-                        <!-- Invoice Chart -->
-                        <div class="card card-chart">
-                            <div class="card-header">
-                                <h4 class="card-title">Status</h4>
-                            </div>
-                            <div class="card-body">
-                                <div id="morrisLine"></div>
-                            </div>
-                        </div>
-                        <!-- /Invoice Chart -->
-
-                    </div>
-                </div>
             </div>
             <div class="row">
                 <div class="col-md-6 d-flex">
@@ -330,7 +289,7 @@
                                                 </div>
                                             </td>
                                             <td class="text-right">
-                                                $200.00
+                                                GHC200.00
                                             </td>
                                         </tr>
                                         <tr>
@@ -356,85 +315,10 @@
                                                 </div>
                                             </td>
                                             <td class="text-right">
-                                                $300.00
+                                                GHC300.00
                                             </td>
                                         </tr>
-                                        <tr>
-                                            <td>
-                                                <h2 class="table-avatar">
-                                                    <a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-03.jpg" alt="User Image"></a>
-                                                    <a href="profile.php">Dr. Deborah Angel</a>
-                                                </h2>
-                                            </td>
-                                            <td>Cardiology</td>
-                                            <td>
-                                                <h2 class="table-avatar">
-                                                    <a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient3.jpg" alt="User Image"></a>
-                                                    <a href="profile.php">Carl Kelly</a>
-                                                </h2>
-                                            </td>
-                                            <td>11 Nov 2019 <span class="text-primary d-block">12.00 PM - 12.15 PM</span></td>
-                                            <td>
-                                                <div class="status-toggle">
-                                                    <input type="checkbox" id="status_3" class="check" checked>
-                                                    <label for="status_3" class="checktoggle">checkbox</label>
-                                                </div>
-                                            </td>
-                                            <td class="text-right">
-                                                $150.00
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h2 class="table-avatar">
-                                                    <a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-04.jpg" alt="User Image"></a>
-                                                    <a href="profile.php">Dr. Sofia Brient</a>
-                                                </h2>
-                                            </td>
-                                            <td>Urology</td>
-                                            <td>
-                                                <h2 class="table-avatar">
-                                                    <a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient4.jpg" alt="User Image"></a>
-                                                    <a href="profile.php"> Michelle Fairfax</a>
-                                                </h2>
-                                            </td>
-                                            <td>7 Nov 2019<span class="text-primary d-block">1.00 PM - 1.20 PM</span></td>
-                                            <td>
-                                                <div class="status-toggle">
-                                                    <input type="checkbox" id="status_4" class="check" checked>
-                                                    <label for="status_4" class="checktoggle">checkbox</label>
-                                                </div>
-                                            </td>
-                                            <td class="text-right">
-                                                $150.00
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <h2 class="table-avatar">
-                                                    <a href="profile.php" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/doctors/doctor-thumb-05.jpg" alt="User Image"></a>
-                                                    <a href="profile.php">Dr. Marvin Campbell</a>
-                                                </h2>
-                                            </td>
-                                            <td>Orthopaedics</td>
-                                            <td>
-                                                <h2 class="table-avatar">
-                                                    <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="assets/img/patients/patient5.jpg" alt="User Image"></a>
-                                                    <a href="profile.php">Gina Moore</a>
-                                                </h2>
-                                            </td>
 
-                                            <td>15 Nov 2019 <span class="text-primary d-block">1.00 PM - 1.15 PM</span></td>
-                                            <td>
-                                                <div class="status-toggle">
-                                                    <input type="checkbox" id="status_5" class="check" checked>
-                                                    <label for="status_5" class="checktoggle">checkbox</label>
-                                                </div>
-                                            </td>
-                                            <td class="text-right">
-                                                $200.00
-                                            </td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>

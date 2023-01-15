@@ -117,16 +117,7 @@ if (isset($_POST['submit'])) {
 			</div>
 			<!-- /Logo -->
 
-			<a href="javascript:void(0);" id="toggle_btn">
-				<i class="fe fe-text-align-left"></i>
-			</a>
 
-			<div class="top-nav-search">
-				<form>
-					<input type="text" class="form-control" placeholder="Search here">
-					<button class="btn" type="submit"><i class="fa fa-search"></i></button>
-				</form>
-			</div>
 
 			<!-- Mobile Menu Toggle -->
 			<a class="mobile_btn" id="mobile_btn">
@@ -139,9 +130,9 @@ if (isset($_POST['submit'])) {
 
 				<!-- Notifications -->
 				<li class="nav-item dropdown noti-dropdown">
-					<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+					<!-- <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
 						<i class="fe fe-bell"></i> <span class="badge badge-pill">3</span>
-					</a>
+					</a> -->
 					<div class="dropdown-menu notifications">
 						<div class="topnav-dropdown-header">
 							<span class="notification-title">Notifications</span>

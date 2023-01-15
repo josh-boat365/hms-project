@@ -48,12 +48,12 @@
                     }
                     ?>
                     <div class="form-group">
-                        <input class="form-control" type="text" name="name" placeholder="Full Name" required value="Ryan Taylor ">
+                        <input class="form-control" type="text" name="name" placeholder="Full Name" required>
                     </div>
 
                     <div class="age_gender d-flex">
                         <div class="form-group col-12 col-sm-6 px-0 py-0">
-                            <input class="form-control" type="number" name="age" placeholder="Age" required value="<?php echo $email ?>">
+                            <input class="form-control" type="number" name="age" placeholder="Age" required>
                         </div>
                         <div class="form-group col-12 col-sm-6 px-0 py-0">
                             <input class="form-control" type="text" name="gender" placeholder="Gender" required value="">

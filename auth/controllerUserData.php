@@ -117,6 +117,8 @@ if (isset($_POST['login'])) {
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
     $check_email = "SELECT * FROM users WHERE email = '$email'";
+    $user_data = "SELECT * FROM users";
+
     $res = mysqli_query($conn, $check_email);
     if (mysqli_num_rows($res) > 0) {
         $fetch = mysqli_fetch_assoc($res);
@@ -126,6 +128,7 @@ if (isset($_POST['login'])) {
             $status = $fetch['status'];
             if ($status == 'verified') {
                 $_SESSION['email'] = $email;
+                $_SESSION['name'] = $name;
                 $_SESSION['password'] = $password;
                 header('location: ../pat-dashboard/patient-dash.php');
             } else {
